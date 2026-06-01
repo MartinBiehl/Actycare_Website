@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contatos | Actycare</title>
+    <link rel="stylesheet" href="Styles/estilos.css?v=20260601">
+    <link rel="stylesheet" href="Styles/footer.css?v=20260601">
+</head>
+
+<body class="pagina-contato">
+    <header class="cabecalho">
+        <a href="index.html" class="logo">
+            <img src="images/actycare-logo-lockup.png" alt="ACTYCARE - The true meaning of excellence">
+        </a>
+
+        <nav class="menu" id="menu-principal" aria-label="Menu principal">
+            <a href="sobre-nos.html">SOBRE NÓS</a>
+            <a href="produtos-e-solucoes.html">PRODUTOS E SOLUÇÕES</a>
+            <a href="contatos.html" aria-current="page">CONTATO</a>
+        </nav>
+
+        <div class="acoes-cabecalho">
+            <button class="icone-cabecalho acao-utilitaria botao-compartilhar" type="button"
+                aria-label="Compartilhar esta página" data-share-button>
+                <img src="images/icons8-partilhar-2-50.png" alt="">
+            </button>
+            <a href="https://www.instagram.com/atc.brasil/" class="icone-cabecalho" target="_blank"
+                rel="noopener noreferrer" aria-label="Instagram">
+                <img src="images/instagram-circle.png" alt="">
+            </a>
+            <a href="https://www.linkedin.com/company/atcdobrasil/" class="icone-cabecalho" target="_blank"
+                rel="noopener noreferrer" aria-label="LinkedIn">
+                <img src="images/linkedin-circle.png" alt="">
+            </a>
+            <button class="botao-menu" type="button" aria-label="Abrir menu" aria-expanded="false"
+                aria-controls="menu-principal">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section class="container contato-section" aria-labelledby="contato-titulo">
+            <div class="contato-intro">
+                <p class="eyebrow">Fale com um consultor</p>
+                <h1 id="contato-titulo">Entre em contato</h1>
+                <p>Preencha os dados abaixo e nossa equipe retornará com o suporte ideal de conservação para a sua formulação.</p>
+            </div>
+
+            <div class="contato-card">
+                <form action="https://api.web3forms.com/submit" method="POST">
+                    <input type="hidden" name="access_key" value="4d49fbeb-51b4-4cb4-a090-07d61e65df94">
+                    <label>
+                        <span>Nome</span>
+                        <input type="text" name="name" placeholder="Seu nome" autocomplete="name" required>
+                    </label>
+                    <label>
+                        <span>E-mail</span>
+                        <input type="email" name="email" placeholder="seuemail@empresa.com" autocomplete="email"
+                            required>
+                    </label>
+                    <label>
+                        <span>Empresa</span>
+                        <input type="text" name="company" placeholder="Nome da empresa" autocomplete="organization"
+                            required>
+                    </label>
+                    <label>
+                        <span>Telefone</span>
+                        <input type="tel" name="phone" placeholder="(00) 00000-0000" autocomplete="tel">
+                    </label>
+                    <label class="campo-mensagem">
+                        <span>Mensagem</span>
+                        <textarea name="message" placeholder="Conte brevemente como podemos ajudar" required></textarea>
+                    </label>
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <actycare-footer></actycare-footer>
+    <script src="Script/footer.js"></script>
+    <script src="Script/menu.js"></script>
+</body>
+
+</html>

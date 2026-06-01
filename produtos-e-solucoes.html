@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produtos & Soluções | Actycare</title>
+    <link rel="stylesheet" href="Styles/estilos.css?v=20260601">
+    <link rel="stylesheet" href="Styles/footer.css?v=20260601">
+</head>
+
+<body class="pagina-produtos">
+    <header class="cabecalho">
+        <a href="index.html" class="logo">
+            <img src="images/actycare-logo-lockup.png" alt="ACTYCARE - The true meaning of excellence">
+        </a>
+
+        <nav class="menu" id="menu-principal" aria-label="Menu principal">
+            <a href="sobre-nos.html">SOBRE NÓS</a>
+            <a href="produtos-e-solucoes.html" aria-current="page">PRODUTOS E SOLUÇÕES</a>
+            <a href="contatos.html">CONTATO</a>
+        </nav>
+
+        <div class="acoes-cabecalho">
+            <button class="icone-cabecalho acao-utilitaria botao-compartilhar" type="button"
+                aria-label="Compartilhar esta página" data-share-button>
+                <img src="images/icons8-partilhar-2-50.png" alt="">
+            </button>
+            <a href="https://www.instagram.com/atc.brasil/" class="icone-cabecalho" target="_blank"
+                rel="noopener noreferrer" aria-label="Instagram">
+                <img src="images/instagram-circle.png" alt="">
+            </a>
+            <a href="https://www.linkedin.com/company/atcdobrasil/" class="icone-cabecalho" target="_blank"
+                rel="noopener noreferrer" aria-label="LinkedIn">
+                <img src="images/linkedin-circle.png" alt="">
+            </a>
+            <button class="botao-menu" type="button" aria-label="Abrir menu" aria-expanded="false"
+                aria-controls="menu-principal">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section class="produtos-overview" id="visao-geral" aria-labelledby="produtos-titulo">
+            <div class="produtos-overview__cabecalho reveal">
+                <div>
+                    <p class="eyebrow">Produtos & Soluções</p>
+                    <h1 id="produtos-titulo">VISÃO GERAL</h1>
+                    <p>Portfólio ACTYCARE® para preservação cosmética com leitura técnica clara, estética editorial e
+                        desempenho formulativo em foco.</p>
+                </div>
+                <p class="produtos-manifesto">BEHIND<br>PRESERVATION.<br>INSIDE<br>INNOVATION.</p>
+            </div>
+
+            <div class="produtos-tabela-shell reveal" data-product-overview>
+                <table class="produtos-tabela" aria-label="Visão geral dos produtos ACTYCARE">
+                    <thead>
+                        <tr>
+                            <th>Solução</th>
+                            <th>INCI Name</th>
+                            <th>Para aplicações</th>
+                            <th>Níveis de uso</th>
+                        </tr>
+                    </thead>
+                    <tbody data-products-body>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="produtos-catalogo reveal">
+            <div>
+                <p class="eyebrow">Catálogo institucional</p>
+                <h2>Receba o catálogo completo com a equipe ACTYCARE®.</h2>
+                <p>Para acessar os dados técnicos completos, solicite o material pelo formulário de contato.</p>
+            </div>
+            <a href="contatos.html">Solicite o catálogo completo</a>
+        </section>
+    </main>
+
+    <actycare-footer></actycare-footer>
+
+    <script src="Script/footer.js"></script>
+    <script src="Script/menu.js"></script>
+    <script src="Script/produtos.js?v=20260601-img"></script>
+</body>
+
+</html>

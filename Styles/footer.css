@@ -1,0 +1,390 @@
+actycare-footer {
+    display: block;
+}
+
+.actycare-footer {
+    width: 100%;
+    overflow: hidden;
+    font-family: "Montserrat", Arial, Helvetica, sans-serif;
+}
+
+.actycare-footer__top {
+    position: relative;
+    background: var(--branco, #ffffff);
+    color: var(--azul, #004f86);
+}
+
+.actycare-footer__top-inner {
+    position: relative;
+    width: min(1280px, 100%);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: minmax(240px, 1.05fr) minmax(230px, 0.9fr) auto minmax(230px, 0.72fr) auto;
+    align-items: center;
+    gap: clamp(26px, 4vw, 64px);
+    padding: clamp(34px, 4.8vw, 60px) clamp(24px, 5vw, 72px);
+}
+
+.actycare-footer__brand {
+    width: fit-content;
+    max-width: 320px;
+    display: grid;
+    gap: 8px;
+    align-items: start;
+    color: var(--azul, #004f86);
+    transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.actycare-footer__brand:hover {
+    opacity: 0.86;
+    transform: translateY(-1px);
+}
+
+.actycare-footer__logo-frame {
+    width: clamp(220px, 21vw, 310px);
+    height: auto;
+    display: block;
+    overflow: visible;
+}
+
+.actycare-footer__logo-frame img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    object-fit: contain;
+    object-position: center;
+}
+
+.actycare-footer__locations,
+.actycare-footer__contact {
+    font-style: normal;
+}
+
+.actycare-footer__locations {
+    display: grid;
+    gap: 18px;
+}
+
+.actycare-footer__location {
+    display: grid;
+    gap: 6px;
+}
+
+.actycare-footer__location strong,
+.actycare-footer__contact a {
+    font-size: clamp(12px, 1vw, 14px);
+    line-height: 1.35;
+}
+
+.actycare-footer__location strong {
+    font-weight: 600;
+    color: var(--azul, #004f86);
+}
+
+.actycare-footer__location span {
+    font-size: clamp(11px, 0.92vw, 13px);
+    font-weight: 200;
+    line-height: 1.45;
+    color: var(--azul, #004f86);
+}
+
+.actycare-footer__flag {
+    width: 1.35em;
+    height: 0.92em;
+    display: inline-block;
+    position: relative;
+    margin-left: 0.38em;
+    border-radius: 2px;
+    box-shadow: 0 0 0 1px rgba(0, 79, 134, 0.14);
+    vertical-align: -0.12em;
+    overflow: hidden;
+}
+
+.actycare-footer__flag--br {
+    background: #139a43;
+}
+
+.actycare-footer__flag--br::before {
+    content: "";
+    position: absolute;
+    inset: 18% 12%;
+    background: #f6d04d;
+    transform: rotate(45deg);
+}
+
+.actycare-footer__flag--br::after {
+    content: "";
+    position: absolute;
+    width: 0.42em;
+    height: 0.42em;
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+    background: #24489a;
+    transform: translate(-50%, -50%);
+}
+
+.actycare-footer__flag--fr {
+    background: linear-gradient(90deg, #0055a4 0 33.33%, #ffffff 33.33% 66.66%, #ef4135 66.66% 100%);
+}
+
+.actycare-footer__divider {
+    width: 1px;
+    height: 86px;
+    display: block;
+    background: rgba(0, 79, 134, 0.28);
+}
+
+.actycare-footer__contact {
+    display: grid;
+    gap: 12px;
+}
+
+.actycare-footer__contact a {
+    width: fit-content;
+    font-weight: 500;
+    color: var(--azul, #004f86);
+    transition: color 0.2s ease, opacity 0.2s ease;
+}
+
+.actycare-footer__contact a:hover {
+    color: var(--azul-profundo, #002f55);
+    opacity: 0.78;
+}
+
+.actycare-footer__social {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.actycare-footer__social a {
+    width: 34px;
+    height: 34px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.actycare-footer__social a:hover {
+    opacity: 0.78;
+    transform: translateY(-2px);
+}
+
+.actycare-footer__social img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.actycare-footer__social a[aria-label*="Instagram"] img,
+.actycare-footer__social a[aria-label*="LinkedIn"] img {
+    filter: brightness(0) saturate(100%) invert(13%) sepia(93%) saturate(1668%) hue-rotate(186deg) brightness(92%) contrast(103%);
+}
+
+.actycare-footer__to-top {
+    position: absolute;
+    top: 22px;
+    right: clamp(20px, 4vw, 56px);
+    width: 42px;
+    height: 42px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(0, 79, 134, 0.24);
+    border-radius: 50%;
+    background: var(--branco, #ffffff);
+    color: var(--azul, #004f86);
+    font: inherit;
+    font-size: 22px;
+    font-weight: 200;
+    line-height: 1;
+    cursor: pointer;
+    transition: background 0.25s ease, color 0.25s ease, border-color 0.25s ease, transform 0.25s ease;
+}
+
+.actycare-footer__to-top:hover {
+    border-color: var(--azul, #004f86);
+    background: var(--azul, #004f86);
+    color: var(--branco, #ffffff);
+    transform: translateY(-3px);
+}
+
+.actycare-footer__bottom {
+    background: #050505;
+    color: var(--branco, #ffffff);
+}
+
+.actycare-footer__bottom-inner {
+    width: min(1280px, 100%);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(260px, auto);
+    gap: 24px clamp(28px, 5vw, 72px);
+    align-items: start;
+    padding: clamp(26px, 3.4vw, 42px) clamp(24px, 5vw, 72px) 22px;
+}
+
+.actycare-footer__menu,
+.actycare-footer__legal {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 14px clamp(20px, 3vw, 36px);
+}
+
+.actycare-footer__menu {
+    justify-content: flex-start;
+}
+
+.actycare-footer__legal {
+    justify-content: flex-end;
+}
+
+.actycare-footer__menu a,
+.actycare-footer__legal a {
+    font-size: clamp(11px, 0.9vw, 13px);
+    line-height: 1.4;
+    color: rgba(255, 255, 255, 0.78);
+    transition: color 0.2s ease, opacity 0.2s ease, transform 0.2s ease;
+}
+
+.actycare-footer__menu a {
+    font-weight: 600;
+}
+
+.actycare-footer__legal a {
+    font-weight: 200;
+}
+
+.actycare-footer__menu a:hover,
+.actycare-footer__legal a:hover {
+    color: var(--branco, #ffffff);
+    opacity: 1;
+    transform: translateY(-1px);
+}
+
+.actycare-footer__copyright {
+    grid-column: 1 / -1;
+    margin-top: 18px;
+    padding-top: 18px;
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    color: rgba(255, 255, 255, 0.64);
+    font-size: clamp(10px, 0.82vw, 12px);
+    font-weight: 200;
+    line-height: 1.4;
+    text-align: center;
+}
+
+@media (max-width: 1040px) {
+    .actycare-footer__top-inner {
+        grid-template-columns: minmax(230px, 1fr) minmax(240px, 1fr) auto;
+        gap: 30px 42px;
+        padding-right: clamp(78px, 10vw, 104px);
+    }
+
+    .actycare-footer__brand {
+        grid-row: span 2;
+    }
+
+    .actycare-footer__divider {
+        display: none;
+    }
+
+    .actycare-footer__contact {
+        grid-column: 2;
+    }
+
+    .actycare-footer__social {
+        grid-column: 3;
+        grid-row: 1 / span 2;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 760px) {
+    .actycare-footer__top-inner {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        gap: 26px;
+        padding: 56px 22px 38px;
+        text-align: center;
+    }
+
+    .actycare-footer__brand,
+    .actycare-footer__contact,
+    .actycare-footer__social {
+        grid-column: auto;
+        grid-row: auto;
+    }
+
+    .actycare-footer__brand {
+        max-width: 100%;
+        justify-items: center;
+    }
+
+    .actycare-footer__locations,
+    .actycare-footer__contact {
+        justify-items: center;
+    }
+
+    .actycare-footer__contact a {
+        width: auto;
+    }
+
+    .actycare-footer__social {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .actycare-footer__to-top {
+        top: 18px;
+        right: 18px;
+    }
+
+    .actycare-footer__bottom-inner {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        gap: 24px;
+        padding: 30px 22px 20px;
+        text-align: center;
+    }
+
+    .actycare-footer__menu,
+    .actycare-footer__legal {
+        justify-content: center;
+    }
+
+    .actycare-footer__legal {
+        max-width: 420px;
+    }
+
+    .actycare-footer__copyright {
+        margin-top: 0;
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .actycare-footer__top-inner {
+        gap: 24px;
+        padding-inline: 18px;
+    }
+
+    .actycare-footer__logo-frame {
+        width: min(250px, 78vw);
+    }
+
+    .actycare-footer__locations {
+        gap: 16px;
+    }
+
+    .actycare-footer__menu,
+    .actycare-footer__legal {
+        display: grid;
+        justify-items: center;
+        gap: 12px;
+    }
+}

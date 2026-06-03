@@ -4,6 +4,9 @@
     const menu = document.querySelector("#menu-principal");
     const shareButton = document.querySelector("[data-share-button]");
     const consultaMobile = window.matchMedia("(max-width: 900px)");
+    const limiteScrollCabecalho = 56;
+    let aguardandoFrameScroll = false;
+    let cabecalhoCompacto = null;
 
     const atualizarAcessibilidade = (aberto) => {
         if (!botaoMenu || !menu) {
@@ -28,6 +31,37 @@
         cabecalho.classList.toggle("menu-aberto", aberto);
         atualizarAcessibilidade(aberto);
     };
+
+    const atualizarCabecalhoNoScroll = () => {
+        if (!cabecalho) {
+            aguardandoFrameScroll = false;
+            return;
+        }
+
+        const deveCompactar = window.scrollY > limiteScrollCabecalho;
+
+        if (deveCompactar !== cabecalhoCompacto) {
+            cabecalho.classList.toggle("header--scrolled", deveCompactar);
+            cabecalhoCompacto = deveCompactar;
+        }
+
+        aguardandoFrameScroll = false;
+    };
+
+    const solicitarAtualizacaoCabecalho = () => {
+        if (aguardandoFrameScroll) {
+            return;
+        }
+
+        aguardandoFrameScroll = true;
+        window.requestAnimationFrame(atualizarCabecalhoNoScroll);
+    };
+
+    if (cabecalho) {
+        atualizarCabecalhoNoScroll();
+        window.addEventListener("scroll", solicitarAtualizacaoCabecalho, { passive: true });
+        window.addEventListener("resize", solicitarAtualizacaoCabecalho);
+    }
 
     if (cabecalho && botaoMenu && menu) {
         botaoMenu.addEventListener("click", () => {

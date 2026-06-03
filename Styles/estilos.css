@@ -455,7 +455,7 @@ img {
 }
 
 .applications-section__header {
-    width: min(980px, 100%);
+
     max-width: 100%;
     margin: 0 auto;
     text-align: center;
@@ -468,7 +468,7 @@ img {
 .applications-section__title {
     max-width: 100%;
     color: var(--azul-profundo);
-    font-size: clamp(38px, 5.4vw, 72px);
+    font-size: 55px;
     font-weight: 200;
     line-height: 1;
 }

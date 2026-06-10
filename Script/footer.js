@@ -5,7 +5,7 @@
                 <div class="actycare-footer__top-inner">
                     <a class="actycare-footer__brand" href="index.html" aria-label="ACTYCARE - página inicial" data-footer-nav>
                         <span class="actycare-footer__logo-frame">
-                            <img src="images/actycare-logo-wordmark.png" alt="ACTYCARE">
+                            <img src="images/actycare-logo-wordmark.png" alt="ACTYCARE" loading="eager" decoding="async">
                         </span>
                     </a>
 
@@ -29,10 +29,10 @@
 
                     <nav class="actycare-footer__social" aria-label="Redes sociais">
                         <a href="https://www.instagram.com/atc.brasil/" target="_blank" rel="noopener noreferrer" aria-label="Instagram ACTYCARE">
-                            <img src="images/instagram-circle.png" alt="">
+                            <img src="images/instagram-circle.png" alt="" loading="eager" decoding="async">
                         </a>
                         <a href="https://www.linkedin.com/company/atcdobrasil/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn ATC do Brasil">
-                            <img src="images/linkedin-circle.png" alt="">
+                            <img src="images/linkedin-circle.png" alt="" loading="eager" decoding="async">
                         </a>
                     </nav>
 

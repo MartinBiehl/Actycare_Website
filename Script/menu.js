@@ -7,6 +7,47 @@
     const limiteScrollCabecalho = 56;
     let aguardandoFrameScroll = false;
     let cabecalhoCompacto = null;
+    const siteImagePreloads = [];
+
+    const preloadSiteImages = () => {
+        const loadedImages = new Set();
+        const imageSources = [
+            "images/actycare-logo-lockup.png",
+            "images/actycare-logo-wordmark.png",
+            "images/icons8-partilhar-2-50.png",
+            "images/instagram-circle.png",
+            "images/linkedin-circle.png",
+            "images/capa.png",
+            "images/atcFranca.png",
+            "images/hidratante.png",
+            "images/loção site.png",
+            "images/cabelo masc.jpg",
+            "images/sabonete líquido 1.jpg",
+            "images/maquiagens.png",
+            "images/lencos-umedecidos.png"
+        ];
+
+        imageSources.forEach((source) => {
+            if (loadedImages.has(source)) {
+                return;
+            }
+
+            loadedImages.add(source);
+
+            const image = new Image();
+            image.decoding = "async";
+            image.loading = "eager";
+            image.src = source;
+            siteImagePreloads.push(image);
+        });
+
+        document.querySelectorAll("img").forEach((image) => {
+            image.decoding = "async";
+            image.loading = "eager";
+        });
+    };
+
+    preloadSiteImages();
 
     const atualizarAcessibilidade = (aberto) => {
         if (!botaoMenu || !menu) {

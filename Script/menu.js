@@ -16,16 +16,24 @@
             "images/actycare-logo-wordmark.png",
             "images/icons8-partilhar-2-50.png",
             "images/instagram-circle.png",
-            "images/linkedin-circle.png",
-            "images/capa.png",
-            "images/atcFranca.png",
-            "images/hidratante.png",
-            "images/loção site.png",
-            "images/cabelo masc.jpg",
-            "images/sabonete líquido 1.jpg",
-            "images/maquiagens.png",
-            "images/lencos-umedecidos.png"
+            "images/linkedin-circle.png"
         ];
+
+        if (document.body.classList.contains("pagina-inicial")) {
+            imageSources.push(
+                "images/site-otimizadas/capa.jpg",
+                "images/site-otimizadas/hidratante.jpg",
+                "images/site-otimizadas/locao.jpg",
+                "images/site-otimizadas/cabelo-masc.jpg",
+                "images/site-otimizadas/sabonete-liquido.jpg",
+                "images/site-otimizadas/maquiagens.jpg",
+                "images/site-otimizadas/lencos-umedecidos.jpg"
+            );
+        }
+
+        if (document.body.classList.contains("pagina-sobre")) {
+            imageSources.push("images/site-otimizadas/atc-franca.jpg");
+        }
 
         imageSources.forEach((source) => {
             if (loadedImages.has(source)) {

@@ -161,7 +161,7 @@ img {
     align-items: center;
     justify-content: center;
     min-height: 44px;
-    padding: 8px 2px 0;
+    padding: 4px 2px;
     font-size: 13px;
     font-weight: 400;
     line-height: 1;
@@ -501,6 +501,55 @@ img {
     line-height: 1.25;
 }
 
+.hero-cta {
+    position: relative;
+    z-index: 2;
+    width: min(820px, calc(100% - clamp(48px, 16vw, 220px)));
+    margin: auto auto auto clamp(24px, 8vw, 112px);
+    display: grid;
+    justify-items: start;
+    gap: clamp(12px, 1.8vw, 18px);
+    padding: 0;
+    color: var(--branco);
+    text-align: left;
+    text-shadow: 0 8px 28px rgba(0, 25, 45, 0.42);
+    transform: translateY(-1vh);
+}
+
+.hero-cta p {
+    width: min(820px, calc(100% - clamp(48px, 16vw, 220px)));
+    font-size: 3rem;
+    font-weight: 350;
+    line-height: 1.05;
+}
+
+.hero-cta a {
+    min-height: 38px;
+    width: 230px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px;
+    border-radius: 6px;
+    background: rgba(0, 47, 85, 0.9);
+    color: var(--branco);
+    font-size: clamp(14px, 1.2vw, 16px);
+    font-weight: 250;
+    line-height: 1;
+    text-shadow: none;
+    box-shadow: 0 16px 34px rgba(0, 25, 45, 0.22);
+    transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.hero-cta a:hover,
+.hero-cta a:focus-visible {
+    background: none;
+    transform: translateY(-2px);
+    box-shadow: 0 20px 38px rgba(0, 25, 45, 0.28);
+    outline: none;
+    border: 1px solid rgba(255, 255, 255, 0.28);
+}
+
 .applications-section {
     overflow: hidden;
     padding: clamp(72px, 9vw, 126px) clamp(20px, 5vw, 72px);
@@ -687,8 +736,8 @@ img {
 
 .application-card__title {
     color: var(--azul);
-    font-size: clamp(25px, 2.2vw, 34px);
-    font-weight: 200;
+    font-size: clamp(35px, 2.2vw, 44px);
+    font-weight: 250;
     line-height: 1.05;
 }
 
@@ -1443,6 +1492,16 @@ img {
         padding: 0 20px 44px;
     }
 
+    .hero-cta {
+        width: min(500px, calc(100% - 48px));
+        margin-left: clamp(22px, 7vw, 64px);
+        gap: 14px;
+    }
+
+    .hero-cta p {
+        font-size: clamp(27px, 5.4vw, 42px);
+    }
+
     .applications-section {
         padding: 64px 20px 86px;
     }
@@ -1575,6 +1634,24 @@ img {
 
     .conteudo-principal p {
         font-size: 18px;
+    }
+
+    .hero-cta {
+        width: min(100% - 32px, 380px);
+        margin: auto 16px auto 16px;
+        gap: 14px;
+        transform: translateY(-1vh);
+    }
+
+    .hero-cta p {
+        font-size: clamp(24px, 7.4vw, 31px);
+        line-height: 1.08;
+    }
+
+    .hero-cta a {
+        min-height: 44px;
+        padding: 0 22px;
+        font-size: 14px;
     }
 
     .applications-section {
@@ -2223,6 +2300,20 @@ img {
     hyphens: none;
 }
 
+.pagina-sobre .pilares + .texto-colunas {
+    width: min(1240px, calc(100% - clamp(40px, 6vw, 96px)));
+    margin: clamp(42px, 5vw, 64px) auto clamp(70px, 8vw, 112px);
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: clamp(34px, 4.5vw, 56px);
+}
+
+.pagina-sobre .pilares + .texto-colunas p {
+    color: rgba(0, 79, 134, 0.68);
+    font-size: clamp(18px, 1.45vw, 21px);
+    line-height: 1.28;
+}
+
 .pagina-sobre .faixa-legado {
     width: 100%;
     margin: 0;
@@ -2411,6 +2502,51 @@ img {
     transform: translateY(-2px);
 }
 
+.onde-estamos {
+    display: grid;
+    grid-template-columns: minmax(280px, 0.82fr) minmax(360px, 1fr);
+    align-items: stretch;
+    min-height: clamp(300px, 28vw, 360px);
+    border-top: 1px solid rgba(0, 79, 134, 0.1);
+    border-bottom: 3px solid var(--azul-profundo);
+    background: var(--branco);
+}
+
+.onde-estamos__conteudo {
+    display: grid;
+    align-content: center;
+    justify-items: start;
+    padding: clamp(38px, 5vw, 64px) clamp(28px, 8vw, 132px);
+}
+
+.onde-estamos__conteudo h2 {
+    color: var(--azul-profundo);
+    font-size: clamp(38px, 4.4vw, 60px);
+    font-weight: 200;
+    line-height: 1;
+}
+
+.onde-estamos__conteudo address {
+    margin-top: clamp(22px, 2.6vw, 34px);
+    color: var(--azul-profundo);
+    font-style: normal;
+    font-size: clamp(16px, 1.45vw, 20px);
+    line-height: 1.65;
+}
+
+.onde-estamos__mapa {
+    min-height: inherit;
+    background: var(--azul-suave);
+}
+
+.onde-estamos__mapa iframe {
+    width: 100%;
+    height: 100%;
+    min-height: inherit;
+    display: block;
+    border: 0;
+}
+
 
 @keyframes produtoAbrir {
     from {
@@ -2517,6 +2653,20 @@ img {
     .pagina-sobre .faixa-legado {
         width: 100%;
     }
+
+    .onde-estamos {
+        grid-template-columns: 1fr;
+        min-height: 0;
+    }
+
+    .onde-estamos__conteudo {
+        padding: 42px 32px;
+    }
+
+    .onde-estamos__mapa,
+    .onde-estamos__mapa iframe {
+        min-height: 300px;
+    }
 }
 
 @media (max-width: 560px) {
@@ -2537,6 +2687,25 @@ img {
 
     .contato-card form {
         grid-template-columns: 1fr;
+    }
+
+    .onde-estamos__conteudo {
+        padding: 36px 20px;
+    }
+
+    .onde-estamos__conteudo h2 {
+        font-size: 36px;
+    }
+
+    .onde-estamos__conteudo address {
+        margin-top: 20px;
+        font-size: 16px;
+        line-height: 1.58;
+    }
+
+    .onde-estamos__mapa,
+    .onde-estamos__mapa iframe {
+        min-height: 260px;
     }
 
     .produtos-overview {

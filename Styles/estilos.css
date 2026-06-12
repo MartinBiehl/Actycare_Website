@@ -516,8 +516,9 @@ img {
     transform: translateY(-1vh);
 }
 
-.hero-cta p {
+.hero-cta h1 {
     width: min(820px, calc(100% - clamp(48px, 16vw, 220px)));
+    margin: 0;
     font-size: 3rem;
     font-weight: 350;
     line-height: 1.05;
@@ -1498,7 +1499,7 @@ img {
         gap: 14px;
     }
 
-    .hero-cta p {
+    .hero-cta h1 {
         font-size: clamp(27px, 5.4vw, 42px);
     }
 
@@ -1643,7 +1644,7 @@ img {
         transform: translateY(-1vh);
     }
 
-    .hero-cta p {
+    .hero-cta h1 {
         font-size: clamp(24px, 7.4vw, 31px);
         line-height: 1.08;
     }

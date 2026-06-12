@@ -531,7 +531,7 @@ img {
     justify-content: center;
     padding: 6px;
     border-radius: 6px;
-    background: rgba(0, 47, 85, 0.9);
+    background: rgba(2, 88, 159, 0.9);
     color: var(--branco);
     font-size: clamp(14px, 1.2vw, 16px);
     font-weight: 250;

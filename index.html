@@ -5,17 +5,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Actycare</title>
+    <link rel="preload" as="image" href="images/site-otimizadas/capa.jpg" fetchpriority="high">
     <link rel="stylesheet" href="Styles/estilos.css?v=20260601">
     <link rel="stylesheet" href="Styles/footer.css?v=20260601">
     <link rel="icon" type="image/png" href="images/atc_favicon.png">
 
 </head>
 
-<body>
+<body class="pagina-inicial">
     <div class="primeira-dobra">
         <header class="cabecalho">
             <a href="index.html" class="logo">
-                <img src="images/actycare-logo-lockup.png" alt="ACTYCARE - The true meaning of excellence">
+                <img src="images/actycare-logo-lockup.png" alt="ACTYCARE - The true meaning of excellence" loading="eager" decoding="async">
             </a>
 
             <nav class="menu" id="menu-principal" aria-label="Menu principal">
@@ -27,15 +28,15 @@
             <div class="acoes-cabecalho">
                 <button class="icone-cabecalho acao-utilitaria botao-compartilhar" type="button"
                     aria-label="Compartilhar esta página" data-share-button>
-                    <img src="images/icons8-partilhar-2-50.png" alt="">
+                    <img src="images/icons8-partilhar-2-50.png" alt="" loading="eager" decoding="async">
                 </button>
                 <a href="https://www.instagram.com/atc.brasil/" class="icone-cabecalho" target="_blank"
                     rel="noopener noreferrer" aria-label="Instagram">
-                    <img src="images/instagram-circle.png" alt="">
+                    <img src="images/instagram-circle.png" alt="" loading="eager" decoding="async">
                 </a>
                 <a href="https://www.linkedin.com/company/atcdobrasil/" class="icone-cabecalho" target="_blank"
                     rel="noopener noreferrer" aria-label="LinkedIn">
-                    <img src="images/linkedin-circle.png" alt="">
+                    <img src="images/linkedin-circle.png" alt="" loading="eager" decoding="async">
                 </a>
                 <button class="botao-menu" type="button" aria-label="Abrir menu" aria-expanded="false"
                     aria-controls="menu-principal">
@@ -47,28 +48,58 @@
         </header>
 
         <main class="principal">
-            <img src="images/capa.png" alt="Close de pele com aplicação cosmética">
-            <div class="conteudo-principal">
-                <h1>ACTYCARE®</h1>
-                <p>THE TRUE MEANING OF EXCELLENCE.</p>
+            <img src="images/site-otimizadas/capa.jpg" alt="Close de pele com aplicação cosmética" loading="eager" decoding="async" fetchpriority="high">
+            <div class="hero-cta" aria-label="Chamada principal">
+                <p>Soluções conservantes para cosméticos.</p>
+                <a href="produtos-e-solucoes.html">Encontre minha solução</a>
             </div>
+            
         </main>
     </div>
 
-    <section class="segunda-dobra" aria-label="Ações principais">
-        <div class="botoes-inferiores">
-            <a href="sobre-nos.html" class="botao-inferior botao-escuro">Conheça a ACTYCARE®</a>
-            <a href="contatos.html" class="botao-inferior botao-claro">Fale conosco</a>
-        </div>
+<section class="secao-conteudo solucoes" id="solucoes">
+            <div class="secao-cabecalho">
+                <p class="eyebrow">Soluções ACTYCARE®</p>
+                <h2>Versatilidade para diferentes propostas formulativas.</h2>
+            </div>
+            <div class="solucoes-grid">
+                <div>
+                    <h3>Proteção microbiológica</h3>
+                    <p>Sistemas pensados para contribuir com a segurança e a integridade de cosméticos e produtos de
+                        cuidado pessoal.</p>
+                </div>
+                <div>
+                    <h3>Estabilidade</h3>
+                    <p>Apoio técnico para formulações que precisam manter performance, identidade e qualidade ao longo
+                        do tempo.</p>
+                </div>
+                <div>
+                    <h3>Compatibilidade</h3>
+                    <p>Aplicável a formulações cosméticas leave-on e rinse-off, incluindo emulsões, géis, sistemas aquosos,
+                        bases tensoativas e diferentes plataformas para cuidados pessoais.</p>
+                </div>
+                <div>
+                    <h3>Aplicações</h3>
+                    <p>Aplicações em cremes, loções, shampoos, condicionadores, sabonetes líquidos, maquiagens, protetores solares,
+                        lenços umedecidos e demais formulações cosméticas que exigem preservação eficaz, estabilidade e cuidado em cada detalhe.</p>
+                </div>
+            </div>
+        </section>
+
+    <section class="faixa-legado">
+            <div>
+                <h2>Tradição, inovação e excelência na arte de formular.</h2>
+            </div>
+            <p>Com influência francesa e visão internacional, ACTYCARE® nasce da união entre conhecimento aplicado,
+                precisão técnica e elegância. Essa herança inspira soluções que respeitam a identidade de cada produto
+                e reforçam a diferença entre o comum e o excepcional.</p>
     </section>
 
     <section class="applications-section" aria-labelledby="applications-title">
         <div class="applications-section__inner">
             <header class="applications-section__header">
-                <p class="eyebrow">Aplicações cosméticas</p>
-                <h2 class="applications-section__title" id="applications-title">A melhor opção para</h2>
-                <p class="applications-section__subtitle">Soluções ACTYCARE® para diferentes formulações cosméticas
-                     e cuidado pessoal.</p>
+                <h2 class="applications-section__title" id="applications-title">Aplicações ACTYCARE®
+                    para cosméticos e produtos de cuidado pessoal</h2>
             </header>
 
             <div class="applications-carousel" data-applications-carousel>
@@ -81,10 +112,10 @@
                     <div class="applications-carousel__track" tabindex="0" aria-label="Aplicações ACTYCARE"
                         data-carousel-track>
                         <article class="application-card">
-                            <a class="application-card__link" href="produtos-e-solucoes.html#visao-geral"
+                            <a class="application-card__link" 
                                 aria-label="Conhecer aplicações ACTYCARE para cremes">
                                 <div class="application-card__image">
-                                    <img src="images/hidratante.png" alt="Creme aplicado sobre a pele" loading="lazy">
+                                    <img src="images/site-otimizadas/hidratante.jpg" alt="Creme aplicado sobre a pele" loading="eager" decoding="async">
                                 </div>
                                 <div class="application-card__content">
                                     <h3 class="application-card__title">Cremes</h3>
@@ -94,10 +125,10 @@
                         </article>
 
                         <article class="application-card">
-                            <a class="application-card__link" href="produtos-e-solucoes.html#visao-geral"
+                            <a class="application-card__link"
                                 aria-label="Conhecer aplicações ACTYCARE para loções">
                                 <div class="application-card__image">
-                                    <img src="images/loção site.png" alt="Pele hidratada com gotas de loção" loading="lazy"
+                                    <img src="images/site-otimizadas/locao.jpg" alt="Pele hidratada com gotas de loção" loading="eager" decoding="async"
                                         style="--card-image-position: 54% center;">
                                 </div>
                                 <div class="application-card__content">
@@ -108,10 +139,10 @@
                         </article>
 
                         <article class="application-card">
-                            <a class="application-card__link" href="produtos-e-solucoes.html#visao-geral"
+                            <a class="application-card__link"
                                 aria-label="Conhecer aplicações ACTYCARE para shampoos">
                                 <div class="application-card__image">
-                                    <img src="images/cabelo masc.jpg" alt="Cabelo sendo lavado com shampoo" loading="lazy"
+                                    <img src="images/site-otimizadas/cabelo-masc.jpg" alt="Cabelo sendo lavado com shampoo" loading="eager" decoding="async"
                                         style="--card-image-position: 58% center;">
                                 </div>
                                 <div class="application-card__content">
@@ -122,10 +153,10 @@
                         </article>
 
                         <article class="application-card">
-                            <a class="application-card__link" href="produtos-e-solucoes.html#visao-geral"
+                            <a class="application-card__link"
                                 aria-label="Conhecer aplicações ACTYCARE para sabonetes líquidos">
                                 <div class="application-card__image">
-                                    <img src="images/sabonete líquido 1.jpg" alt="Espuma de sabonete líquido nas mãos" loading="lazy"
+                                    <img src="images/sabonete líquido 4.png" alt="Espuma de sabonete líquido nas mãos" loading="eager" decoding="async"
                                         style="--card-image-position: 50% center;">
                                 </div>
                                 <div class="application-card__content">
@@ -136,10 +167,10 @@
                         </article>
 
                         <article class="application-card">
-                            <a class="application-card__link" href="produtos-e-solucoes.html#visao-geral"
+                            <a class="application-card__link"
                                 aria-label="Conhecer aplicações ACTYCARE para maquiagens">
                                 <div class="application-card__image">
-                                    <img src="images/maquiagens.png" alt="Aplicação de maquiagem nos cílios" loading="lazy"
+                                    <img src="images/site-otimizadas/maquiagens.jpg" alt="Aplicação de maquiagem nos cílios" loading="eager" decoding="async"
                                         style="--card-image-position: 46% center;">
                                 </div>
                                 <div class="application-card__content">
@@ -150,11 +181,11 @@
                         </article>
 
                         <article class="application-card">
-                            <a class="application-card__link" href="produtos-e-solucoes.html#visao-geral"
+                            <a class="application-card__link"
                                 aria-label="Conhecer aplicações ACTYCARE para lenços umedecidos">
                                 <div class="application-card__image">
-                                    <img src="images/lencos-umedecidos.png" alt="Lenço umedecido para cuidado cosmético"
-                                        loading="lazy" style="--card-image-position: 50% center;">
+                                    <img src="images/site-otimizadas/lencos-umedecidos.jpg" alt="Lenço umedecido para cuidado cosmético"
+                                        loading="eager" decoding="async" style="--card-image-position: 50% center;">
                                 </div>
                                 <div class="application-card__content">
                                     <h3 class="application-card__title">Lenços umedecidos</h3>
@@ -175,6 +206,32 @@
     </section>
 
 
+     <section class="cta-contato" id="contato">
+            <h2>Descubra qual solução ACTYCARE® melhor se adapta à sua formulação.</h2>
+            <a href="contatos.html">Encontrar Minha Solução</a>
+        </section>
+    
+    <section class="onde-estamos" aria-labelledby="onde-estamos-titulo">
+            <div class="onde-estamos__conteudo">
+                <h2 id="onde-estamos-titulo">Como chegar</h2>
+                <address>
+                    Av. Brasil, 3040 - Bela Vista<br>
+                    Estância Velha - RS, 93614-810
+                </address>
+                <a href="https://www.google.com/maps/search/?api=1&query=Av.%20Brasil%2C%203040%20-%20Das%20Quintas%2C%20Est%C3%A2ncia%20Velha%20-%20RS%2C%2093600-000"
+                    target="_blank" rel="noopener noreferrer">Ver rota no Google Maps</a>
+            </div>
+
+            <div class="onde-estamos__mapa" aria-label="Mapa da localização da ATC do Brasil">
+                <iframe
+                    title="Mapa da ATC do Brasil em Estância Velha"
+                    src="https://www.google.com/maps?q=Av.%20Brasil%2C%203040%20-%20Das%20Quintas%2C%20Est%C3%A2ncia%20Velha%20-%20RS%2C%2093600-000&output=embed"
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </section>
 
     <actycare-footer></actycare-footer>
 

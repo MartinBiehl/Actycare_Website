@@ -4,6 +4,58 @@
     const menu = document.querySelector("#menu-principal");
     const shareButton = document.querySelector("[data-share-button]");
     const consultaMobile = window.matchMedia("(max-width: 900px)");
+    const limiteScrollCabecalho = 56;
+    let aguardandoFrameScroll = false;
+    let cabecalhoCompacto = null;
+    const siteImagePreloads = [];
+
+    const preloadSiteImages = () => {
+        const loadedImages = new Set();
+        const imageSources = [
+            "images/actycare-logo-lockup.png",
+            "images/actycare-logo-wordmark.png",
+            "images/icons8-partilhar-2-50.png",
+            "images/instagram-circle.png",
+            "images/linkedin-circle.png"
+        ];
+
+        if (document.body.classList.contains("pagina-inicial")) {
+            imageSources.push(
+                "images/site-otimizadas/capa.jpg",
+                "images/site-otimizadas/hidratante.jpg",
+                "images/site-otimizadas/locao.jpg",
+                "images/site-otimizadas/cabelo-masc.jpg",
+                "images/site-otimizadas/sabonete-liquido.jpg",
+                "images/site-otimizadas/maquiagens.jpg",
+                "images/site-otimizadas/lencos-umedecidos.jpg"
+            );
+        }
+
+        if (document.body.classList.contains("pagina-sobre")) {
+            imageSources.push("images/site-otimizadas/atc-franca.jpg");
+        }
+
+        imageSources.forEach((source) => {
+            if (loadedImages.has(source)) {
+                return;
+            }
+
+            loadedImages.add(source);
+
+            const image = new Image();
+            image.decoding = "async";
+            image.loading = "eager";
+            image.src = source;
+            siteImagePreloads.push(image);
+        });
+
+        document.querySelectorAll("img").forEach((image) => {
+            image.decoding = "async";
+            image.loading = "eager";
+        });
+    };
+
+    preloadSiteImages();
 
     const atualizarAcessibilidade = (aberto) => {
         if (!botaoMenu || !menu) {
@@ -28,6 +80,37 @@
         cabecalho.classList.toggle("menu-aberto", aberto);
         atualizarAcessibilidade(aberto);
     };
+
+    const atualizarCabecalhoNoScroll = () => {
+        if (!cabecalho) {
+            aguardandoFrameScroll = false;
+            return;
+        }
+
+        const deveCompactar = window.scrollY > limiteScrollCabecalho;
+
+        if (deveCompactar !== cabecalhoCompacto) {
+            cabecalho.classList.toggle("header--scrolled", deveCompactar);
+            cabecalhoCompacto = deveCompactar;
+        }
+
+        aguardandoFrameScroll = false;
+    };
+
+    const solicitarAtualizacaoCabecalho = () => {
+        if (aguardandoFrameScroll) {
+            return;
+        }
+
+        aguardandoFrameScroll = true;
+        window.requestAnimationFrame(atualizarCabecalhoNoScroll);
+    };
+
+    if (cabecalho) {
+        atualizarCabecalhoNoScroll();
+        window.addEventListener("scroll", solicitarAtualizacaoCabecalho, { passive: true });
+        window.addEventListener("resize", solicitarAtualizacaoCabecalho);
+    }
 
     if (cabecalho && botaoMenu && menu) {
         botaoMenu.addEventListener("click", () => {

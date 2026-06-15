@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contatos | Actycare</title>
+    <title data-i18n-en="" data-i18n-es="">Contatos | Actycare</title>
     <link rel="stylesheet" href="Styles/estilos.css?v=20260601">
     <link rel="stylesheet" href="Styles/footer.css?v=20260601">
     <link rel="icon" type="image/png" href="images/atc_favicon.png">
@@ -16,17 +16,29 @@
             <img src="images/actycare-logo-lockup.png" alt="ACTYCARE" loading="eager" decoding="async">
         </a>
 
-        <nav class="menu" id="menu-principal" aria-label="Menu principal">
-            <a href="sobre-nos.html">SOBRE NÓS</a>
-            <a href="produtos-e-solucoes.html">PRODUTOS E SOLUÇÕES</a>
-            <a href="contatos.html" aria-current="page">CONTATO</a>
+        <nav class="menu" id="menu-principal" aria-label="Menu principal" data-i18n-en-aria-label="" data-i18n-es-aria-label="">
+            <a href="sobre-nos.html" data-i18n-en="" data-i18n-es="">SOBRE NÓS</a>
+            <a href="produtos-e-solucoes.html" data-i18n-en="" data-i18n-es="">PRODUTOS E SOLUÇÕES</a>
+            <a href="contatos.html" aria-current="page" data-i18n-en="" data-i18n-es="">CONTATO</a>
         </nav>
 
         <div class="acoes-cabecalho">
             <button class="icone-cabecalho acao-utilitaria botao-compartilhar" type="button"
-                aria-label="Compartilhar esta página" data-share-button>
+                aria-label="Compartilhar esta página" data-share-button data-i18n-en-aria-label="" data-i18n-es-aria-label="">
                 <img src="images/icons8-partilhar-2-50.png" alt="" loading="eager" decoding="async">
             </button>
+            <div class="language-selector" data-language-selector>
+                <button class="icone-cabecalho acao-utilitaria botao-traducao" type="button"
+                    aria-label="Selecionar idioma" aria-haspopup="true" aria-expanded="false"
+                    data-language-toggle data-i18n-en-aria-label="" data-i18n-es-aria-label="">
+                    <img src="images/internet.png" alt="" loading="eager" decoding="async">
+                </button>
+                <div class="language-menu" role="group" aria-label="Idiomas" data-language-menu data-i18n-en-aria-label="" data-i18n-es-aria-label="">
+                    <button class="language-option" type="button" data-language-option="pt">Português</button>
+                    <button class="language-option" type="button" data-language-option="en">English</button>
+                    <button class="language-option" type="button" data-language-option="es">Español</button>
+                </div>
+            </div>
             <a href="https://www.instagram.com/atc.brasil/" class="icone-cabecalho" target="_blank"
                 rel="noopener noreferrer" aria-label="Instagram">
                 <img src="images/instagram-circle.png" alt="" loading="eager" decoding="async">
@@ -36,7 +48,7 @@
                 <img src="images/linkedin-circle.png" alt="" loading="eager" decoding="async">
             </a>
             <button class="botao-menu" type="button" aria-label="Abrir menu" aria-expanded="false"
-                aria-controls="menu-principal">
+                aria-controls="menu-principal" data-i18n-en-aria-label="" data-i18n-es-aria-label="">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -47,17 +59,17 @@
     <main>
         <section class="container contato-section" aria-labelledby="contato-titulo">
             <div class="contato-intro">
-                <p class="eyebrow">Fale com um consultor</p>
-                <h1 id="contato-titulo">Entre em contato</h1>
-                <p>Preencha os dados abaixo e nossa equipe retornará com o suporte ideal de conservação para a sua formulação.</p>
+                <p class="eyebrow" data-i18n-en="" data-i18n-es="">Fale com um consultor</p>
+                <h1 id="contato-titulo" data-i18n-en="" data-i18n-es="">Entre em contato</h1>
+                <p data-i18n-en="" data-i18n-es="">Preencha os dados abaixo e nossa equipe retornará com o suporte ideal de conservação para a sua formulação.</p>
             </div>
 
             <div class="contato-card">
                 <form action="https://api.web3forms.com/submit" method="POST">
                     <input type="hidden" name="access_key" value="4d49fbeb-51b4-4cb4-a090-07d61e65df94">
                     <label>
-                        <span>Nome</span>
-                        <input type="text" name="name" placeholder="Seu nome" autocomplete="name" required>
+                        <span data-i18n-en="" data-i18n-es="">Nome</span>
+                        <input type="text" name="name" placeholder="Seu nome" autocomplete="name" required data-i18n-en-placeholder="" data-i18n-es-placeholder="">
                     </label>
                     <label>
                         <span>E-mail</span>
@@ -65,26 +77,26 @@
                             required>
                     </label>
                     <label>
-                        <span>Empresa</span>
-                        <input type="text" name="company" placeholder="Nome da empresa" autocomplete="organization"
+                        <span data-i18n-en="" data-i18n-es="">Empresa</span>
+                        <input type="text" name="company" placeholder="Nome da empresa" autocomplete="organization" data-i18n-en-placeholder="" data-i18n-es-placeholder=""
                             required>
                     </label>
                     <label>
-                        <span>Telefone</span>
+                        <span data-i18n-en="" data-i18n-es="">Telefone</span>
                         <input type="tel" name="phone" placeholder="(00) 00000-0000" autocomplete="tel">
                     </label>
                     <label class="campo-mensagem">
-                        <span>Mensagem</span>
-                        <textarea name="message" placeholder="Conte brevemente como podemos ajudar" required></textarea>
+                        <span data-i18n-en="" data-i18n-es="">Mensagem</span>
+                        <textarea name="message" placeholder="Conte brevemente como podemos ajudar" required data-i18n-en-placeholder="" data-i18n-es-placeholder=""></textarea>
                     </label>
-                    <button type="submit">Enviar</button>
+                    <button type="submit" data-i18n-en="" data-i18n-es="">Enviar</button>
                 </form>
             </div>
         </section>
 
         <section class="onde-estamos" aria-labelledby="onde-estamos-titulo">
             <div class="onde-estamos__conteudo">
-                <h2 id="onde-estamos-titulo">Como chegar</h2>
+                <h2 id="onde-estamos-titulo" data-i18n-en="" data-i18n-es="">Como chegar</h2>
                 <address>
                     Av. Brasil, 3040 - Bela Vista<br>
                     Estância Velha - RS, 93614-810
@@ -93,7 +105,7 @@
 
             <div class="onde-estamos__mapa">
                 <iframe
-                    title="Mapa da ATC do Brasil em Estância Velha"
+                    title="Mapa da ATC do Brasil em Estância Velha" data-i18n-en-title="" data-i18n-es-title=""
                     src="https://www.google.com/maps?q=Av.%20Brasil%2C%203040%20-%20Das%20Quintas%2C%20Est%C3%A2ncia%20Velha%20-%20RS%2C%2093600-000&output=embed"
                     loading="lazy"
                     referrerpolicy="no-referrer-when-downgrade"
@@ -104,6 +116,7 @@
     </main>
 
     <actycare-footer></actycare-footer>
+    <script src="Script/i18n.js"></script>
     <script src="Script/footer.js"></script>
     <script src="Script/menu.js"></script>
 </body>

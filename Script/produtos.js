@@ -352,6 +352,78 @@ const actycareProducts = [
     }
 ];
 
+// Preencha os campos en/es abaixo para traduzir o conteúdo técnico de cada produto.
+const actycareProductTranslations = {
+    "actycare-ph": {
+        en: { application: "", intro: [], applications: [], differentials: [], benefits: [], note: "" },
+        es: { application: "", intro: [], applications: [], differentials: [], benefits: [], note: "" }
+    },
+    "actycare-phcg": {
+        en: { application: "", intro: [], applications: [], differentials: [], benefits: [], note: "" },
+        es: { application: "", intro: [], applications: [], differentials: [], benefits: [], note: "" }
+    },
+    "actycare-pheg": {
+        en: { application: "", intro: [], applications: [], differentials: [], benefits: [], note: "" },
+        es: { application: "", intro: [], applications: [], differentials: [], benefits: [], note: "" }
+    },
+    "actycare-ph4": {
+        en: { application: "", intro: [], applications: [], differentials: [], benefits: [], note: "" },
+        es: { application: "", intro: [], applications: [], differentials: [], benefits: [], note: "" }
+    },
+    "actycare-phb": {
+        en: { application: "", intro: [], applications: [], differentials: [], benefits: [], note: "" },
+        es: { application: "", intro: [], applications: [], differentials: [], benefits: [], note: "" }
+    },
+    "actycare-mc": {
+        en: { application: "", intro: [], applications: [], differentials: [], benefits: [], note: "" },
+        es: { application: "", intro: [], applications: [], differentials: [], benefits: [], note: "" }
+    },
+    "actycare-bs": {
+        en: { application: "", intro: [], applications: [], differentials: [], benefits: [], note: "" },
+        es: { application: "", intro: [], applications: [], differentials: [], benefits: [], note: "" }
+    },
+    "actycare-bsk": {
+        en: { application: "", intro: [], applications: [], differentials: [], benefits: [], note: "" },
+        es: { application: "", intro: [], applications: [], differentials: [], benefits: [], note: "" }
+    },
+    "actycare-mp": {
+        en: { application: "", intro: [], applications: [], differentials: [], benefits: [], note: "" },
+        es: { application: "", intro: [], applications: [], differentials: [], benefits: [], note: "" }
+    },
+    "actycare-pp": {
+        en: { application: "", intro: [], applications: [], differentials: [], benefits: [], note: "" },
+        es: { application: "", intro: [], applications: [], differentials: [], benefits: [], note: "" }
+    },
+    "actycare-ba": {
+        en: { application: "", intro: [], applications: [], differentials: [], benefits: [], note: "" },
+        es: { application: "", intro: [], applications: [], differentials: [], benefits: [], note: "" }
+    },
+    "actycare-phba": {
+        en: { application: "", intro: [], applications: [], differentials: [], benefits: [], note: "" },
+        es: { application: "", intro: [], applications: [], differentials: [], benefits: [], note: "" }
+    },
+    "actycare-mph": {
+        en: { application: "", intro: [], applications: [], differentials: [], benefits: [], note: "" },
+        es: { application: "", intro: [], applications: [], differentials: [], benefits: [], note: "" }
+    },
+    "actycare-mi": {
+        en: { application: "", intro: [], applications: [], differentials: [], benefits: [], note: "" },
+        es: { application: "", intro: [], applications: [], differentials: [], benefits: [], note: "" }
+    },
+    "actycare-dm": {
+        en: { application: "", intro: [], applications: [], differentials: [], benefits: [], note: "" },
+        es: { application: "", intro: [], applications: [], differentials: [], benefits: [], note: "" }
+    },
+    "actycare-zo": {
+        en: { application: "", intro: [], applications: [], differentials: [], benefits: [], note: "" },
+        es: { application: "", intro: [], applications: [], differentials: [], benefits: [], note: "" }
+    },
+    "actycare-ph-avant": {
+        en: { application: "", intro: [], applications: [], differentials: [], benefits: [], note: "" },
+        es: { application: "", intro: [], applications: [], differentials: [], benefits: [], note: "" }
+    }
+};
+
 (() => {
     const tableBody = document.querySelector("[data-products-body]");
     const overview = document.querySelector("[data-product-overview]");
@@ -368,6 +440,63 @@ const actycareProducts = [
         .replaceAll("<", "&lt;")
         .replaceAll(">", "&gt;")
         .replaceAll('"', "&quot;");
+
+    // Preencha en/es para traduzir os rótulos gerados pela tabela e pelos cards.
+    const catalogTranslations = {
+        solution: { pt: "Solução", en: "", es: "" },
+        applicationsFor: { pt: "Para aplicações", en: "", es: "" },
+        useLevels: { pt: "Níveis de uso", en: "", es: "" },
+        applications: { pt: "Aplicações", en: "", es: "" },
+        differentials: { pt: "Diferenciais", en: "", es: "" },
+        technicalData: { pt: "Dados técnicos de {product}", en: "", es: "" },
+        seeDetails: { pt: "Ver detalhes de {product}", en: "", es: "" },
+        catalogImageAlt: { pt: "Imagem do catálogo para {product}", en: "", es: "" },
+        defaultNote: {
+            pt: "Recomendado entre {use} na formulação final, dependendo do tipo de produto e da avaliação de eficácia microbiológica.",
+            en: "",
+            es: ""
+        }
+    };
+
+    const getLanguage = () => window.actycareI18n?.getLanguage?.() || "pt";
+
+    const formatText = (text, replacements = {}) => Object.entries(replacements).reduce(
+        (currentText, [key, value]) => currentText.replaceAll(`{${key}}`, value),
+        text
+    );
+
+    const getCatalogText = (key, replacements = {}) => {
+        const translations = catalogTranslations[key] || {};
+        const language = getLanguage();
+        const text = translations[language] || translations.pt || "";
+
+        return formatText(text, replacements);
+    };
+
+    const getProductTranslation = (product) => (
+        actycareProductTranslations[product.id]?.[getLanguage()] || {}
+    );
+
+    const getProductField = (product, field) => {
+        const translation = getProductTranslation(product)[field];
+
+        if (typeof translation === "string" && translation.trim()) {
+            return translation;
+        }
+
+        return product[field] || "";
+    };
+
+    const getProductList = (product, field) => {
+        const originalItems = product[field] || [];
+        const translatedItems = getProductTranslation(product)[field];
+
+        if (!Array.isArray(translatedItems) || !translatedItems.length) {
+            return originalItems;
+        }
+
+        return originalItems.map((item, index) => translatedItems[index] || item);
+    };
 
     const renderList = (items) => items
         .map((item) => `<li>${escapeHtml(item)}</li>`)
@@ -392,10 +521,16 @@ const actycareProducts = [
     };
 
     const renderExpandedRow = (product) => {
-        const note = product.note || `Recomendado entre ${product.use} na formulação final, dependendo do tipo de produto e da avaliação de eficácia microbiológica.`;
+        const note = getProductField(product, "note") || getCatalogText("defaultNote", { use: product.use });
+        const productApplication = getProductField(product, "application");
+        const productIntro = getProductList(product, "intro");
+        const productApplications = getProductList(product, "applications");
+        const productDifferentials = getProductList(product, "differentials");
         const titleSuffix = product.code.replace(/^ACTYCARE®\s*/i, "");
         const alertColor = product.alertColor || "#002f55";
         const cardStyle = ` style="--produto-alerta-cor: ${escapeHtml(alertColor)};"`;
+        const technicalDataLabel = getCatalogText("technicalData", { product: product.name });
+        const catalogImageAlt = getCatalogText("catalogImageAlt", { product: product.name });
 
         // ── Layout WIDE (imagem horizontal em baixo) ─────────────────────
         if (product.wideImage) {
@@ -407,7 +542,7 @@ const actycareProducts = [
                                 <p class="eyebrow">ACTYCARE®</p>
                                 <h2>${escapeHtml(titleSuffix)}</h2>
                                 <div class="produto-catalogo-card__intro">
-                                    ${product.intro.map((paragraph) => `<p>${escapeHtml(paragraph)}</p>`).join("")}
+                                    ${productIntro.map((paragraph) => `<p>${escapeHtml(paragraph)}</p>`).join("")}
                                 </div>
                             </div>
                             <div class="produto-catalogo-card__right">
@@ -415,20 +550,20 @@ const actycareProducts = [
                                 <div class="produto-catalogo-card__alerta">
                                     ${escapeHtml(note)}
                                 </div>
-                                <div class="produto-catalogo-card__dados" aria-label="Dados técnicos de ${escapeHtml(product.name)}">
+                                <div class="produto-catalogo-card__dados" aria-label="${escapeHtml(technicalDataLabel)}">
                                     <div>
-                                        <span>Aplicações</span>
-                                        <strong>${escapeHtml(product.applications.slice(0, 4).join(", "))}</strong>
+                                        <span>${escapeHtml(getCatalogText("applications"))}</span>
+                                        <strong>${escapeHtml(productApplications.slice(0, 4).join(", "))}</strong>
                                     </div>
                                     <div>
-                                        <span>Diferenciais</span>
-                                        <strong>${escapeHtml(product.differentials.join(", "))}</strong>
+                                        <span>${escapeHtml(getCatalogText("differentials"))}</span>
+                                        <strong>${escapeHtml(productDifferentials.join(", "))}</strong>
                                     </div>
                                 </div>
                             </div>
                             <figure class="produto-catalogo-card__imagem">
-                                <img src="${product.image}" alt="Imagem do catálogo para ${escapeHtml(product.name)}" loading="eager" decoding="async" style="object-position: ${product.imagePosition};">
-                                <figcaption>${escapeHtml(product.application)}</figcaption>
+                                <img src="${product.image}" alt="${escapeHtml(catalogImageAlt)}" loading="eager" decoding="async" style="object-position: ${product.imagePosition};">
+                                <figcaption>${escapeHtml(productApplication)}</figcaption>
                             </figure>
                         </article>
                     </td>
@@ -446,24 +581,24 @@ const actycareProducts = [
                             <p class="eyebrow">ACTYCARE®</p>
                             <h2>${escapeHtml(titleSuffix)}</h2>
                             <div class="produto-catalogo-card__intro">
-                                ${product.intro.map((paragraph) => `<p>${escapeHtml(paragraph)}</p>`).join("")}
+                                ${productIntro.map((paragraph) => `<p>${escapeHtml(paragraph)}</p>`).join("")}
                             </div>
                             <div class="produto-catalogo-card__alerta">
                                 ${escapeHtml(note)}
                             </div>
                         </div>
                         <figure class="produto-catalogo-card__imagem">
-                            <img src="${product.image}" alt="Imagem do catálogo para ${escapeHtml(product.name)}" loading="eager" decoding="async" style="object-position: ${product.imagePosition};">
-                            <figcaption>${escapeHtml(product.application)}</figcaption>
+                            <img src="${product.image}" alt="${escapeHtml(catalogImageAlt)}" loading="eager" decoding="async" style="object-position: ${product.imagePosition};">
+                            <figcaption>${escapeHtml(productApplication)}</figcaption>
                         </figure>
-                        <div class="produto-catalogo-card__dados" aria-label="Dados técnicos de ${escapeHtml(product.name)}">
+                        <div class="produto-catalogo-card__dados" aria-label="${escapeHtml(technicalDataLabel)}">
                             <div>
-                                <span>Aplicações</span>
-                                <strong>${escapeHtml(product.applications.slice(0, 4).join(", "))}</strong>
+                                <span>${escapeHtml(getCatalogText("applications"))}</span>
+                                <strong>${escapeHtml(productApplications.slice(0, 4).join(", "))}</strong>
                             </div>
                             <div>
-                                <span>Diferenciais</span>
-                                <strong>${escapeHtml(product.differentials.join(", "))}</strong>
+                                <span>${escapeHtml(getCatalogText("differentials"))}</span>
+                                <strong>${escapeHtml(productDifferentials.join(", "))}</strong>
                             </div>
                         </div>
                     </article>
@@ -474,14 +609,15 @@ const actycareProducts = [
 
     const renderTable = () => {
         tableBody.innerHTML = actycareProducts.map((product) => `
-            <tr class="produto-row ${product.id === activeProductId ? "is-active" : ""}" tabindex="0" role="button" aria-expanded="${product.id === activeProductId}" aria-label="Ver detalhes de ${escapeHtml(product.name)}" data-product-id="${product.id}">
-                <td data-label="Solução"><span>${escapeHtml(product.name)}</span></td>
+            <tr class="produto-row ${product.id === activeProductId ? "is-active" : ""}" tabindex="0" role="button" aria-expanded="${product.id === activeProductId}" aria-label="${escapeHtml(getCatalogText("seeDetails", { product: product.name }))}" data-product-id="${product.id}">
+                <td data-label="${escapeHtml(getCatalogText("solution"))}"><span>${escapeHtml(product.name)}</span></td>
                 <td data-label="INCI Name">${escapeHtml(product.inci)}</td>
-                <td data-label="Para aplicações">${escapeHtml(product.application)}</td>
-                <td data-label="Níveis de uso">${escapeHtml(product.use)}</td>
+                <td data-label="${escapeHtml(getCatalogText("applicationsFor"))}">${escapeHtml(getProductField(product, "application"))}</td>
+                <td data-label="${escapeHtml(getCatalogText("useLevels"))}">${escapeHtml(product.use)}</td>
             </tr>
             ${product.id === activeProductId ? renderExpandedRow(product) : ""}
         `).join("");
+        window.actycareI18n?.apply?.(tableBody);
     };
 
     const observeReveal = (scope = document) => {
@@ -586,6 +722,10 @@ const actycareProducts = [
 
         event.preventDefault();
         selectProduct(row.dataset.productId);
+    });
+
+    window.addEventListener("actycare:languagechange", () => {
+        renderTable();
     });
 
     const productFromHash = window.location.hash.replace("#", "");

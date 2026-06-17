@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title data-i18n-en="" data-i18n-es="">Contatos | Actycare</title>
-    <link rel="stylesheet" href="Styles/estilos.css?v=20260601">
-    <link rel="stylesheet" href="Styles/footer.css?v=20260601">
+    <title data-i18n-en="Contact | Actycare" data-i18n-es="Contacto | Actycare">Contatos | Actycare</title>
+    <link rel="stylesheet" href="Styles/estilos.css?v=20260617-v3">
+    <link rel="stylesheet" href="Styles/footer.css?v=20260617-v3">
     <link rel="icon" type="image/png" href="images/atc_favicon.png">
 </head>
 
@@ -16,24 +16,24 @@
             <img src="images/actycare-logo-lockup.png" alt="ACTYCARE" loading="eager" decoding="async">
         </a>
 
-        <nav class="menu" id="menu-principal" aria-label="Menu principal" data-i18n-en-aria-label="" data-i18n-es-aria-label="">
-            <a href="sobre-nos.html" data-i18n-en="" data-i18n-es="">SOBRE NÓS</a>
-            <a href="produtos-e-solucoes.html" data-i18n-en="" data-i18n-es="">PRODUTOS E SOLUÇÕES</a>
-            <a href="contatos.html" aria-current="page" data-i18n-en="" data-i18n-es="">CONTATO</a>
+        <nav class="menu" id="menu-principal" aria-label="Menu principal" data-i18n-en-aria-label="main menu" data-i18n-es-aria-label="menu principal">
+            <a href="sobre-nos.html" data-i18n-en="ABOUT US" data-i18n-es="SOBRE NOSOTROS">SOBRE NÓS</a>
+            <a href="produtos-e-solucoes.html" data-i18n-en="PRODUCTS AND SOLUTIONS" data-i18n-es="PRODUCTOS Y SOLUCIONES">PRODUTOS E SOLUÇÕES</a>
+            <a href="contatos.html" aria-current="page" data-i18n-en="CONTACT" data-i18n-es="CONTACTO">CONTATO</a>
         </nav>
 
         <div class="acoes-cabecalho">
             <button class="icone-cabecalho acao-utilitaria botao-compartilhar" type="button"
-                aria-label="Compartilhar esta página" data-share-button data-i18n-en-aria-label="" data-i18n-es-aria-label="">
+                aria-label="Compartilhar esta página" data-share-button data-i18n-en-aria-label="Share this page" data-i18n-es-aria-label="Compartir esta página">
                 <img src="images/icons8-partilhar-2-50.png" alt="" loading="eager" decoding="async">
             </button>
             <div class="language-selector" data-language-selector>
                 <button class="icone-cabecalho acao-utilitaria botao-traducao" type="button"
                     aria-label="Selecionar idioma" aria-haspopup="true" aria-expanded="false"
-                    data-language-toggle data-i18n-en-aria-label="" data-i18n-es-aria-label="">
+                    data-language-toggle data-i18n-en-aria-label="Translate" data-i18n-es-aria-label="Traducir">
                     <img src="images/internet.png" alt="" loading="eager" decoding="async">
                 </button>
-                <div class="language-menu" role="group" aria-label="Idiomas" data-language-menu data-i18n-en-aria-label="" data-i18n-es-aria-label="">
+                <div class="language-menu" role="group" aria-label="Idiomas" data-language-menu data-i18n-en-aria-label="Languages" data-i18n-es-aria-label="Idiomas">
                     <button class="language-option" type="button" data-language-option="pt">Português</button>
                     <button class="language-option" type="button" data-language-option="en">English</button>
                     <button class="language-option" type="button" data-language-option="es">Español</button>
@@ -48,7 +48,7 @@
                 <img src="images/linkedin-circle.png" alt="" loading="eager" decoding="async">
             </a>
             <button class="botao-menu" type="button" aria-label="Abrir menu" aria-expanded="false"
-                aria-controls="menu-principal" data-i18n-en-aria-label="" data-i18n-es-aria-label="">
+                aria-controls="menu-principal" data-i18n-en-aria-label="Open menu" data-i18n-es-aria-label="Abrir menú">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -59,44 +59,46 @@
     <main>
         <section class="container contato-section" aria-labelledby="contato-titulo">
             <div class="contato-intro">
-                <p class="eyebrow" data-i18n-en="" data-i18n-es="">Fale com um consultor</p>
-                <h1 id="contato-titulo" data-i18n-en="" data-i18n-es="">Entre em contato</h1>
-                <p data-i18n-en="" data-i18n-es="">Preencha os dados abaixo e nossa equipe retornará com o suporte ideal de conservação para a sua formulação.</p>
+                <p class="eyebrow" data-i18n-en="Talk to a consultant" data-i18n-es="Hable con un consultor">Fale com um consultor</p>
+                <h1 id="contato-titulo" data-i18n-en="Contact us" data-i18n-es="Contáctenos">Entre em contato</h1>
+                <p data-i18n-en="Fill in the information below and our team will get back to you with the ideal preservation support for your formulation." 
+                data-i18n-es="Completa los datos a continuación y nuestro equipo se pondrá en contacto contigo con el soporte de conservación ideal para tu formulación">
+                    Preencha os dados abaixo e nossa equipe retornará com o suporte ideal de conservação para a sua formulação.</p>
             </div>
 
             <div class="contato-card">
                 <form action="https://api.web3forms.com/submit" method="POST">
                     <input type="hidden" name="access_key" value="4d49fbeb-51b4-4cb4-a090-07d61e65df94">
                     <label>
-                        <span data-i18n-en="" data-i18n-es="">Nome</span>
-                        <input type="text" name="name" placeholder="Seu nome" autocomplete="name" required data-i18n-en-placeholder="" data-i18n-es-placeholder="">
+                        <span data-i18n-en="Name" data-i18n-es="Nombre">Nome</span>
+                        <input type="text" name="name" placeholder="Seu nome" autocomplete="name" required data-i18n-en-placeholder="Your name" data-i18n-es-placeholder="Tu nombre">
                     </label>
                     <label>
                         <span>E-mail</span>
-                        <input type="email" name="email" placeholder="seuemail@empresa.com" autocomplete="email"
+                        <input type="email" name="email" placeholder="email@empresa.com" autocomplete="email" data-i18n-en-placeholder="companyemail@company.com" data-i18n-es-placeholder="emaildelaempresa@empresa.com"
                             required>
                     </label>
                     <label>
-                        <span data-i18n-en="" data-i18n-es="">Empresa</span>
-                        <input type="text" name="company" placeholder="Nome da empresa" autocomplete="organization" data-i18n-en-placeholder="" data-i18n-es-placeholder=""
+                        <span data-i18n-en="Company" data-i18n-es="Empresa">Empresa</span>
+                        <input type="text" name="company" placeholder="Nome da empresa" autocomplete="organization" data-i18n-en-placeholder="Company name" data-i18n-es-placeholder="nombre de la empresa"
                             required>
                     </label>
                     <label>
-                        <span data-i18n-en="" data-i18n-es="">Telefone</span>
+                        <span data-i18n-en="Phone" data-i18n-es="Teléfono">Telefone</span>
                         <input type="tel" name="phone" placeholder="(00) 00000-0000" autocomplete="tel">
                     </label>
                     <label class="campo-mensagem">
-                        <span data-i18n-en="" data-i18n-es="">Mensagem</span>
-                        <textarea name="message" placeholder="Conte brevemente como podemos ajudar" required data-i18n-en-placeholder="" data-i18n-es-placeholder=""></textarea>
+                        <span data-i18n-en="Message" data-i18n-es="Mensaje">Mensagem</span>
+                        <textarea name="message" placeholder="Conte brevemente como podemos ajudar" required data-i18n-en-placeholder="Tell us how we can help" data-i18n-es-placeholder="Cuéntenos cómo podemos ayudar"></textarea>
                     </label>
-                    <button type="submit" data-i18n-en="" data-i18n-es="">Enviar</button>
+                    <button type="submit" data-i18n-en="Send" data-i18n-es="Enviar">Enviar</button>
                 </form>
             </div>
         </section>
 
         <section class="onde-estamos" aria-labelledby="onde-estamos-titulo">
             <div class="onde-estamos__conteudo">
-                <h2 id="onde-estamos-titulo" data-i18n-en="" data-i18n-es="">Como chegar</h2>
+                <h2 id="onde-estamos-titulo" data-i18n-en="How to find us" data-i18n-es="Cómo llegar">Como chegar</h2>
                 <address>
                     Av. Brasil, 3040 - Bela Vista<br>
                     Estância Velha - RS, 93614-810
@@ -105,7 +107,7 @@
 
             <div class="onde-estamos__mapa">
                 <iframe
-                    title="Mapa da ATC do Brasil em Estância Velha" data-i18n-en-title="" data-i18n-es-title=""
+                    title="Mapa da ATC do Brasil em Estância Velha" data-i18n-en-title="Map of ATC Brazil in Estância Velha" data-i18n-es-title="Mapa de la ATC de Brasil en Estância Velha"
                     src="https://www.google.com/maps?q=Av.%20Brasil%2C%203040%20-%20Das%20Quintas%2C%20Est%C3%A2ncia%20Velha%20-%20RS%2C%2093600-000&output=embed"
                     loading="lazy"
                     referrerpolicy="no-referrer-when-downgrade"
@@ -116,9 +118,9 @@
     </main>
 
     <actycare-footer></actycare-footer>
-    <script src="Script/i18n.js"></script>
-    <script src="Script/footer.js"></script>
-    <script src="Script/menu.js"></script>
+    <script src="Script/i18n.js?v=20260617-v3"></script>
+    <script src="Script/footer.js?v=20260617-v3"></script>
+    <script src="Script/menu.js?v=20260617-v3"></script>
 </body>
 
 </html>

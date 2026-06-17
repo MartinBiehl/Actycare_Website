@@ -737,7 +737,7 @@ img {
 
 .application-card__title {
     color: var(--azul);
-    font-size: clamp(35px, 2.2vw, 44px);
+    font-size: 30px;
     font-weight: 250;
     line-height: 1.05;
 }

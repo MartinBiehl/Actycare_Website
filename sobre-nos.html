@@ -4,30 +4,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sobre nós | Actycare</title>
+    <title data-i18n-en="About us | Actycare" data-i18n-es="Sobre nosotros | Actycare">Sobre nós | Actycare</title>
     <link rel="preload" as="image" href="images/site-otimizadas/atc-franca.jpg" fetchpriority="high">
-    <link rel="stylesheet" href="Styles/estilos.css?v=20260601">
-    <link rel="stylesheet" href="Styles/footer.css?v=20260601">
+    <link rel="stylesheet" href="Styles/estilos.css?v=20260617-v3">
+    <link rel="stylesheet" href="Styles/footer.css?v=20260617-v3">
     <link rel="icon" type="image/png" href="images/atc_favicon.png">
 </head>
 
 <body class="pagina-sobre">
     <header class="cabecalho">
         <a href="index.html" class="logo">
-            <img src="images/actycare-logo-lockup.png" alt="ACTYCARE - The true meaning of excellence" loading="eager" decoding="async">
+            <img src="images/actycare-logo-lockup.png" alt="ACTYCARE - The true meaning of excellence" loading="eager" decoding="async" data-i18n-en-alt="" data-i18n-es-alt="">
         </a>
 
-        <nav class="menu" id="menu-principal" aria-label="Menu principal">
-            <a href="sobre-nos.html" aria-current="page">SOBRE NÓS</a>
-            <a href="produtos-e-solucoes.html">PRODUTOS E SOLUÇÕES</a>
-            <a href="contatos.html">CONTATO</a>
+        <nav class="menu" id="menu-principal" aria-label="Menu principal" data-i18n-en-aria-label="Main menu" data-i18n-es-aria-label="Menú principal">
+            <a href="sobre-nos.html" aria-current="page" data-i18n-en="ABOUT US" data-i18n-es="SOBRE NOSOTROS">SOBRE NÓS</a>
+            <a href="produtos-e-solucoes.html" data-i18n-en="PRODUCTS AND SOLUTIONS" data-i18n-es="PRODUCTOS Y SOLUCIONES">PRODUTOS E SOLUÇÕES</a>
+            <a href="contatos.html" data-i18n-en="CONTACT" data-i18n-es="CONTACTO">CONTATO</a>
         </nav>
 
         <div class="acoes-cabecalho">
             <button class="icone-cabecalho acao-utilitaria botao-compartilhar" type="button"
-                aria-label="Compartilhar esta página" data-share-button>
+                aria-label="Compartilhar esta página" data-share-button data-i18n-en-aria-label="Share this page" data-i18n-es-aria-label="Compartir esta página">
                 <img src="images/icons8-partilhar-2-50.png" alt="" loading="eager" decoding="async">
             </button>
+            <div class="language-selector" data-language-selector>
+                <button class="icone-cabecalho acao-utilitaria botao-traducao" type="button"
+                    aria-label="Selecionar idioma" aria-haspopup="true" aria-expanded="false"
+                    data-language-toggle data-i18n-en-aria-label="Select language" data-i18n-es-aria-label="Seleccionar idioma">
+                    <img src="images/internet.png" alt="" loading="eager" decoding="async">
+                </button>
+                <div class="language-menu" role="group" aria-label="Idiomas" data-language-menu data-i18n-en-aria-label="Languages" data-i18n-es-aria-label="Idiomas">
+                    <button class="language-option" type="button" data-language-option="pt">Português</button>
+                    <button class="language-option" type="button" data-language-option="en">English</button>
+                    <button class="language-option" type="button" data-language-option="es">Español</button>
+                </div>
+            </div>
             <a href="https://www.instagram.com/atc.brasil/" class="icone-cabecalho" target="_blank"
                 rel="noopener noreferrer" aria-label="Instagram">
                 <img src="images/instagram-circle.png" alt="" loading="eager" decoding="async">
@@ -37,7 +49,7 @@
                 <img src="images/linkedin-circle.png" alt="" loading="eager" decoding="async">
             </a>
             <button class="botao-menu" type="button" aria-label="Abrir menu" aria-expanded="false"
-                aria-controls="menu-principal">
+                aria-controls="menu-principal" data-i18n-en-aria-label="Open menu" data-i18n-es-aria-label="Abrir menú">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -47,77 +59,137 @@
 
     <main>
         <div class="sobre-hero">
-            <img src="images/site-otimizadas/atc-franca.jpg" alt="Equipe técnica em laboratório" loading="eager" decoding="async" fetchpriority="high">
+            <img src="images/site-otimizadas/atc-franca.jpg" alt="Equipe técnica em laboratório" loading="eager" decoding="async" fetchpriority="high" data-i18n-en-alt="" data-i18n-es-alt="">
         </div>
 
         <section class="sobre-intro secao-conteudo">
             <div class="secao-cabecalho">
-                <h1>SOBRE NÓS</h1>
-                <h2 class="visually-hidden">Nossa história e valores</h2>
-                <h3>DA CIÊNCIA INVISÍVEL À EXCELENCIA EM CONSERVAÇÃO COSMÉTICA</h3>
+                <h1 data-i18n-en="ABOUT US" data-i18n-es="SOBRE NOSOTROS">SOBRE NÓS</h1>
+                <h2 class="visually-hidden" data-i18n-en="Our Story and Values" data-i18n-es="NUESTRA HISTORIA Y VALORES">Nossa história e valores</h2>
+                <h3 data-i18n-en="FROM THE INVISIBLE SCIENCE TO COSMETIC CONSERVATION EXCELLENCE" data-i18n-es="DE LA CIENCIA INVISÍBLE A LA EXCELENCIA EN CONSERVACIÓN COSMÉTICA">DA CIÊNCIA INVISÍVEL À EXCELENCIA EM CONSERVAÇÃO COSMÉTICA</h3>
             </div>
             <div class="texto-colunas">
-                <p>Existem tecnologias que não se revelam aos olhos do consumidor final, mas são essenciais para preservar
+                <p data-i18n-en="There are technologies that do not reveal themselves to the eyes of the end consumer, yet they are 
+                essential to preserving the quality, safety, and integrity of a product throughout its entire life cycle. It is in this 
+                technical, discreet, and indispensable field that ATC® has built its path: developing chemical specialties for markets that
+                 demand high performance, consistency, and trust in every application."
+                data-i18n-es="Existen tecnologías que no se revelan ante 
+                 los ojos del consumidor final, pero que son esenciales para preservar la calidad, la seguridad y la integridad de un producto a lo 
+                 largo de todo su ciclo de vida. Es en este territorio técnico, discreto e indispensable donde ATC® ha construido su trayectoria: 
+                 desarrollando especialidades químicas para mercados que exigen alto desempeño, consistencia y confianza en cada aplicación.">
+                 Existem tecnologias que não se revelamaos olhos do consumidor final, mas são essenciais para preservar
                      a qualidade, a segurança e a integridade de um produto ao longo de todo o seu ciclo de vida. É nesse
                       território técnico, discreto e indispensável que a ATC® construiu sua trajetória: desenvolvendo 
                       especialidades químicas para mercados que exigem alto desempenho, consistência e confiança em cada 
                       aplicação.
                 </p>
-                <p>Com atuação internacional e sólida experiência no desenvolvimento de soluções químicas especializadas,
+
+                <p data-i18n-en="With international operations and solid experience in the development of specialized chemical solutions, 
+                ATC® brings together applied knowledge, technical capability, and a vision oriented toward innovation. Throughout its history,
+                it has consolidated expertise across different industrial segments, always focused on delivering solutions that combine efficiency, 
+                quality, traceability, and specialized support."
+                data-i18n-es="Con presencia internacional y sólida experiencia en el desarrollo de soluciones químicas especializadas, ATC® reúne 
+                conocimiento aplicado, capacidad técnica y una visión orientada a la innovación. A lo largo de su historia, ha consolidado competencias
+                en diferentes segmentos industriales, siempre con foco en la entrega de soluciones que combinan eficiencia, calidad, trazabilidad y soporte
+                especializado.">
+                   Com atuação internacional e sólida experiência no desenvolvimento de soluções químicas especializadas,
                      a ATC® reúne conhecimento aplicado, capacidade técnica e uma visão orientada à inovação. Ao longo de 
                      sua história, consolidou competências em diferentes segmentos industriais, sempre com foco na entrega 
-                     de soluções que combinam eficiência, qualidade, rastreabilidade e suporte especializado.</p>
-                <p>A presença da ATC Chemicals, na França, e da ATC do Brasil fortalece essa atuação, conectando a 
-                    solidez de uma perspectiva internacional à proximidade com o mercado local. Essa estrutura permite 
-                    compreender as particularidades de cada aplicação, oferecer suporte técnico qualificado e acompanhar
-                     a evolução constante dos desafios regulatórios, tecnológicos e mercadológicos que moldam a indústria moderna.</p>
+                     de soluções que combinam eficiência, qualidade, rastreabilidade e suporte especializado.
+                    </p>
+
+                <p data-i18n-en="The presence of ATC Chemicals in France and ATC do Brasil strengthens this work, connecting the robustness of an international 
+                perspective with proximity to the local market. This structure makes it possible to understand the specificities of each application, provide qualified
+                 technical support, and keep pace with the constant evolution of the regulatory, technological, and market challenges that shape modern industry." 
+                data-i18n-es="La presencia de ATC Chemicals en Francia y de ATC do Brasil fortalece esta actuación, conectando la solidez de una perspectiva internacional 
+                con la cercanía al mercado local. Esta estructura permite comprender las particularidades de cada aplicación, ofrecer soporte técnico calificado y acompañar 
+                la evolución constante de los desafíos regulatorios, tecnológicos y de mercado que moldean la industria moderna.">
+                A presença da ATC Chemicals, na França, e da ATC do Brasil fortalece essa atuação, conectando a
+                solidez de uma perspectiva internacional à proximidade com o mercado local. Essa estrutura permite 
+                compreender as particularidades de cada aplicação, oferecer suporte técnico qualificado e acompanhar
+                a evolução constante dos desafios regulatórios, tecnológicos e mercadológicos que moldam a indústria moderna.
+            </p>
+
             </div>
         </section>
 
             <div>
-                <p class="titulo-pilares">Nossa Expertise</p>
+                <p class="titulo-pilares" data-i18n-en="Our Expertise" data-i18n-es="Nuestra Expertise">Nossa Expertise</p>
             </div>
 
         <section class="pilares">
-            <h2 class="visually-hidden">Pilares da ATC</h2>
+            <h2 class="visually-hidden" data-i18n-en="ATC Pillars" data-i18n-es="Pilares de ATC">Pilares da ATC</h2>
             <div>
-                <p>Desenvolvimento de especialidades químicas de alta performance</p>
+                <p data-i18n-en="High performance chemical specialties development" data-i18n-es="Desarrollo de especialidades químicas de alto desempeño">
+                    Desenvolvimento de especialidades químicas de alta performance</p>
             </div>
             <div>
-                <p>Conhecimento aplicado em química, microbiologia e conservação</p>
+                <p data-i18n-en="Applied knowledge in chemistry, microbiology, and preservation" 
+                data-i18n-es="Conocimiento aplicado en química, microbiología y conservación">
+                Conhecimento aplicado em química, microbiologia e conservação</p>
             </div>
             <div>
-               <p>Suporte técnico especializado e proximidade com a indústria</p>
-            </div>
-
-            <div>
-               <p>Presença internacional com atuação local</p>
-            </div>
-
-            <div>
-               <p>Compromisso com qualidade, rastreabilidade e consistência técnica</p>
+               <p data-i18n-en="Specialized technical support and proximity to the industry" 
+               data-i18n-es="Soporte técnico especializado y proximidad con la industria">
+                Suporte técnico especializado e proximidade com a indústria</p>
             </div>
 
             <div>
-               <p>Soluções alinhadas às exigências da indústria contemporânea</p>
+               <p data-i18n-en="International presence with local operations" data-i18n-es="Presencia internacional con actuación local">
+                Presença internacional com atuação local</p>
+            </div>
+
+            <div>
+               <p data-i18n-en="Commitment to quality, traceability, and technical consistency" 
+               data-i18n-es="Compromiso con la calidad, la trazabilidad y la consistencia técnica">
+               Compromisso com qualidade, rastreabilidade e consistência técnica</p>
+            </div>
+
+            <div>
+               <p data-i18n-en="Solutions aligned with the demands of contemporary industry"
+                data-i18n-es="Soluciones alineadas con las exigencias de la industria contemporánea">
+                Soluções alinhadas às exigências da indústria contemporânea</p>
             </div>
 
         </section>
 
          <div class="texto-colunas">
-                <p>No segmento de cuidados pessoais e cosméticos, essa expertise se traduz na linha ACTYCARE®, composta por
-                    especialidades conservantes desenvolvidas para formulações que demandam segurança microbiológica, estabilidade,
-                    compatibilidade e elevado padrão de qualidade.
+                <p data-i18n-en="In the personal care and cosmetics segment, this expertise is reflected in the ACTYCARE® line, composed of preservative 
+                specialties developed for formulations that require microbiological safety, stability, compatibility, and a high standard of quality."
+                 data-i18n-es="En el segmento de cuidado personal y cosméticos, esta experiencia se refleja en la 
+                línea ACTYCARE®, compuesta por especialidades conservantes desarrolladas para formulaciones que requieren seguridad microbiológica, 
+                estabilidad, compatibilidad y un alto estándar de calidad.">
+                No segmento de cuidados pessoais e cosméticos, essa expertise se traduz na linha ACTYCARE®, composta por
+                especialidades conservantes desenvolvidas para formulações que demandam segurança microbiológica, estabilidade,
+                compatibilidade e elevado padrão de qualidade.
                 </p>
-                <p>Mais do que fornecer ingredientes, acreditamos na construção de parcerias técnicas. Atuamos ao lado de
-                    formuladores, desenvolvedores e indústrias cosméticas, oferecendo conhecimento aplicado, suporte especializado
-                     e soluções capazes de acompanhar cada etapa do desenvolvimento formulativo, da concepção à proteção final do
-                     produto.</p>
-                <p>Nossa missão é contribuir para que cada formulação preserve sua integridade, mantenha sua identidade e entregue
+
+                <p data-i18n-en="More than supplying ingredients, we believe in building technical partnerships. We work alongside formulators, 
+                developers, and cosmetics industries, offering applied knowledge, specialized support, and solutions capable of supporting every stage of 
+                formulation development, from conception to the final protection of the product." 
+                data-i18n-es="Más que suministrar ingredientes, creemos en la construcción de alianzas técnicas. Trabajamos junto a formuladores, desarrolladores 
+                e industrias cosméticas, ofreciendo conocimiento aplicado, soporte especializado y soluciones capaces de acompañar cada etapa del desarrollo formulativo, 
+                desde la concepción hasta la protección final del producto.">
+                Mais do que fornecer ingredientes, acreditamos na construção de parcerias técnicas. Atuamos ao lado de
+                formuladores, desenvolvedores e indústrias cosméticas, oferecendo conhecimento aplicado, suporte especializado
+                e soluções capazes de acompanhar cada etapa do desenvolvimento formulativo, da concepção à proteção final do
+                produto.
+                </p>
+
+                <p data-i18n-en="Our mission is to help each formulation preserve its integrity, maintain its identity, and deliver to 
+                the end consumer the experience for which it was designed." 
+                data-i18n-es="Nuestra misión es contribuir a que cada formulación preserve su integridad, mantenga su identidad y entregue 
+                al consumidor final la experiencia para la cual fue concebida."
+                >Nossa missão é contribuir para que cada formulação preserve sua integridade, mantenha sua identidade e entregue
                 ao consumidor final a experiência para a qual foi concebida. <br>Porque a excelência não está apenas no que se vê.
-                Ela também está na ciência que protege, sustenta e valoriza cada criação.</p>
-                <p>Porque uma formulação bem conservada não apenas resiste ao tempo. Ela preserva a identidade da marca,
-                     sustenta sua promessa e reforça a confiança de quem a utiliza.</p>
+                Ela também está na ciência que protege, sustenta e valoriza cada criação.
+                </p>
+
+                <p data-i18n-en="Because excellence is not only found in what can be seen. It is also present in the science that protects, sustains, and enhances each creation." 
+                data-i18n-es="Porque la excelencia no está solo en lo que se ve. También está en la ciencia que protege, sostiene y valoriza cada creación.">
+                Porque uma formulação bem conservada não apenas resiste ao tempo. Ela preserva a identidade da marca, sustenta sua promessa e reforça a confiança de quem a utiliza.
+                </p>
+
                 <p>ACTYCARE®. <em style="font-style: italic;">The true meaning of excellence.</em></p>
             </div>
 
@@ -125,8 +197,9 @@
 
     <actycare-footer></actycare-footer>
 
-    <script src="Script/footer.js"></script>
-    <script src="Script/menu.js"></script>
+    <script src="Script/i18n.js?v=20260617-v3"></script>
+    <script src="Script/footer.js?v=20260617-v3"></script>
+    <script src="Script/menu.js?v=20260617-v3"></script>
 </body>
 
 </html>

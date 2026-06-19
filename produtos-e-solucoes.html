@@ -4,29 +4,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Produtos & Soluções | Actycare</title>
-    <link rel="stylesheet" href="Styles/estilos.css?v=20260601">
-    <link rel="stylesheet" href="Styles/footer.css?v=20260601">
+    <title data-i18n-en="Products & Solutions | Actycare" data-i18n-es="Productos & Soluciones | Actycare">Produtos & Soluções | Actycare</title>
+    <link rel="stylesheet" href="Styles/estilos.css?v=20260617-v3">
+    <link rel="stylesheet" href="Styles/footer.css?v=20260617-v3">
     <link rel="icon" type="image/png" href="images/atc_favicon.png">
 </head>
 
 <body class="pagina-produtos">
     <header class="cabecalho">
         <a href="index.html" class="logo">
-            <img src="images/actycare-logo-lockup.png" alt="ACTYCARE - The true meaning of excellence" loading="eager" decoding="async">
+            <img src="images/actycare-logo-lockup.png" alt="ACTYCARE - The true meaning of excellence" loading="eager" decoding="async" data-i18n-en-alt="" data-i18n-es-alt="">
         </a>
 
-        <nav class="menu" id="menu-principal" aria-label="Menu principal">
-            <a href="sobre-nos.html">SOBRE NÓS</a>
-            <a href="produtos-e-solucoes.html" aria-current="page">PRODUTOS E SOLUÇÕES</a>
-            <a href="contatos.html">CONTATO</a>
+        <nav class="menu" id="menu-principal" aria-label="Menu principal" data-i18n-en-aria-label="Main Menu" data-i18n-es-aria-label="Menú principal">
+            <a href="sobre-nos.html" data-i18n-en="ABOUT US" data-i18n-es="SOBRE NOSOTROS">SOBRE NÓS</a>
+            <a href="produtos-e-solucoes.html" aria-current="page" data-i18n-en="PRODUCTS AND SOLUTIONS" data-i18n-es="PRODUCTOS Y SOLUCIONES">PRODUTOS E SOLUÇÕES</a>
+            <a href="contatos.html" data-i18n-en="CONTACT" data-i18n-es="CONTACTO">CONTATO</a>
         </nav>
 
         <div class="acoes-cabecalho">
             <button class="icone-cabecalho acao-utilitaria botao-compartilhar" type="button"
-                aria-label="Compartilhar esta página" data-share-button>
+                aria-label="Compartilhar esta página" data-share-button data-i18n-en-aria-label="Share this page" data-i18n-es-aria-label="Compartir esta página">
                 <img src="images/icons8-partilhar-2-50.png" alt="" loading="eager" decoding="async">
             </button>
+            <div class="language-selector" data-language-selector>
+                <button class="icone-cabecalho acao-utilitaria botao-traducao" type="button"
+                    aria-label="Selecionar idioma" aria-haspopup="true" aria-expanded="false"
+                    data-language-toggle data-i18n-en-aria-label="Select language" data-i18n-es-aria-label="Seleccionar idioma">
+                    <img src="images/internet.png" alt="" loading="eager" decoding="async">
+                </button>
+                <div class="language-menu" role="group" aria-label="Idiomas" data-language-menu data-i18n-en-aria-label="Languages" data-i18n-es-aria-label="Idiomas">
+                    <button class="language-option" type="button" data-language-option="pt">Português</button>
+                    <button class="language-option" type="button" data-language-option="en">English</button>
+                    <button class="language-option" type="button" data-language-option="es">Español</button>
+                </div>
+            </div>
             <a href="https://www.instagram.com/atc.brasil/" class="icone-cabecalho" target="_blank"
                 rel="noopener noreferrer" aria-label="Instagram">
                 <img src="images/instagram-circle.png" alt="" loading="eager" decoding="async">
@@ -36,7 +48,7 @@
                 <img src="images/linkedin-circle.png" alt="" loading="eager" decoding="async">
             </a>
             <button class="botao-menu" type="button" aria-label="Abrir menu" aria-expanded="false"
-                aria-controls="menu-principal">
+                aria-controls="menu-principal" data-i18n-en-aria-label="Open menu" data-i18n-es-aria-label="Abrir menú">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -48,21 +60,21 @@
         <section class="produtos-overview" id="visao-geral" aria-labelledby="produtos-titulo">
             <div class="produtos-overview__cabecalho reveal">
                 <div>
-                    <p class="eyebrow">Produtos & Soluções</p>
-                    <h1 id="produtos-titulo">VISÃO GERAL</h1>
-                    <p>Conheça as soluções de conservação cosmética da ACTYCARE®</p>
+                    <p class="eyebrow" data-i18n-en="Products & Solutions" data-i18n-es="Productos & Soluciones">Produtos & Soluções</p>
+                    <h1 id="produtos-titulo" data-i18n-en="General Overview" data-i18n-es="Visión General">VISÃO GERAL</h1>
+                    <p data-i18n-en="Discover the conservation solutions from ACTYCARE®" data-i18n-es="">Conoce las soluciones de conservación cosmética de ACTYCARE®</p>
                 </div>
-                <p class="produtos-manifesto">BEHIND<br>PRESERVATION.<br>INSIDE<br>INNOVATION.</p>
+                <p class="produtos-manifesto" data-i18n-en="" data-i18n-es="">BEHIND<br>PRESERVATION.<br>INSIDE<br>INNOVATION.</p>
             </div>
 
             <div class="produtos-tabela-shell" data-product-overview>
-                <table class="produtos-tabela" aria-label="Visão geral dos produtos ACTYCARE">
+                <table class="produtos-tabela" aria-label="Visão geral dos produtos ACTYCARE" data-i18n-en-aria-label="" data-i18n-es-aria-label="">
                     <thead>
                         <tr>
-                            <th>Solução</th>
+                            <th data-i18n-en="Solution" data-i18n-es="Solución">Solução</th>
                             <th>INCI Name</th>
-                            <th>Para aplicações</th>
-                            <th>Níveis de uso</th>
+                            <th data-i18n-en="Applications" data-i18n-es="Aplicaciones">Para aplicações</th>
+                            <th data-i18n-en="Usage levels" data-i18n-es="Niveis de uso">Níveis de uso</th>
                         </tr>
                     </thead>
                     <tbody data-products-body>
@@ -73,19 +85,20 @@
 
         <section class="produtos-catalogo reveal">
             <div>
-                <p class="eyebrow">Catálogo institucional</p>
-                <h2>Receba o catálogo completo com a equipe ACTYCARE®.</h2>
-                <p>Para acessar os dados técnicos completos, solicite o material pelo formulário de contato.</p>
+                <p class="eyebrow" data-i18n-en="Institutional catalog" data-i18n-es="Catálogo institucional">Catálogo institucional</p>
+                <h2 data-i18n-en="Receive the complete catalog with the ACTYCARE® team." data-i18n-es="Recibe el catálogo completo con el equipo ACTYCARE®.">Receba o catálogo completo com a equipe ACTYCARE®.</h2>
+                <p data-i18n-en="To access the complete technical data, request the material through the contact form." data-i18n-es="Para acceder a los datos técnicos completos, solicita el material a través del formulario de contacto.">Para acessar os dados técnicos completos, solicite o material pelo formulário de contato.</p>
             </div>
-            <a href="contatos.html">Solicite o catálogo completo</a>
+            <a href="contatos.html" data-i18n-en="Request the complete catalog" data-i18n-es="Solicita el catálogo completo">Solicite o catálogo completo</a>
         </section>
     </main>
 
     <actycare-footer></actycare-footer>
 
-    <script src="Script/footer.js"></script>
-    <script src="Script/menu.js"></script>
-    <script src="Script/produtos.js?v=20260601-img"></script>
+    <script src="Script/i18n.js?v=20260617-v3"></script>
+    <script src="Script/footer.js?v=20260617-v3"></script>
+    <script src="Script/menu.js?v=20260617-v3"></script>
+    <script src="Script/produtos.js?v=20260617-v3"></script>
 </body>
 
 </html>

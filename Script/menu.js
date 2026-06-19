@@ -8,6 +8,24 @@
     let aguardandoFrameScroll = false;
     let cabecalhoCompacto = null;
     const siteImagePreloads = [];
+    // Preencha os valores en/es para traduzir labels e mensagens controladas por este script.
+    const uiText = {
+        menuOpen: { pt: "Abrir menu", en: "Open menu", es: "Abrir menú" },
+        menuClose: { pt: "Fechar menu", en: "Close menu", es: "Cerrar menú" },
+        shareText: { pt: "Conheça a ACTYCARE® — The True Meaning of Excellence.", en: "Meet ACTYCARE® — The True Meaning of Excellence.", es: "Conoce ACTYCARE® — El Verdadero Significado de la Excelencia." },
+        shareSubject: { pt: "Conheça a ACTYCARE®", en: "Meet ACTYCARE®", es: "Conoce ACTYCARE®" },
+        linkCopied: { pt: "Link copiado.", en: "Link copied.", es: "Enlace copiado." },
+        copyError: { pt: "Não foi possível copiar o link.", en: "Could not copy the link.", es: "No se pudo copiar el enlace." }
+    };
+
+    const getCurrentLanguage = () => window.actycareI18n?.getLanguage?.() || "pt";
+
+    const getUiText = (key) => {
+        const translations = uiText[key] || {};
+        const language = getCurrentLanguage();
+
+        return translations[language] || translations.pt || "";
+    };
 
     const preloadSiteImages = () => {
         const loadedImages = new Set();
@@ -15,6 +33,7 @@
             "images/actycare-logo-lockup.png",
             "images/actycare-logo-wordmark.png",
             "images/icons8-partilhar-2-50.png",
+            "images/internet.png",
             "images/instagram-circle.png",
             "images/linkedin-circle.png"
         ];
@@ -63,7 +82,7 @@
         }
 
         botaoMenu.setAttribute("aria-expanded", String(aberto));
-        botaoMenu.setAttribute("aria-label", aberto ? "Fechar menu" : "Abrir menu");
+        botaoMenu.setAttribute("aria-label", aberto ? getUiText("menuClose") : getUiText("menuOpen"));
 
         if (consultaMobile.matches) {
             menu.setAttribute("aria-hidden", String(!aberto));
@@ -158,7 +177,7 @@
     const buildShareUrl = (action) => {
         const currentUrl = getCurrentUrl();
         const encodedUrl = encodeURIComponent(currentUrl);
-        const shareText = "Conheça a ACTYCARE® — The True Meaning of Excellence.";
+        const shareText = getUiText("shareText");
         const fullMessage = `${shareText}\n\n${currentUrl}`;
 
         const urls = {
@@ -166,7 +185,7 @@
             whatsapp: `https://api.whatsapp.com/send?text=${encodeURIComponent(fullMessage)}`,
             facebook: `https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}&quote=${encodeURIComponent(shareText)}`,
             twitter: `https://twitter.com/intent/tweet?url=${encodedUrl}&text=${encodeURIComponent(shareText)}`,
-            email: `mailto:?subject=${encodeURIComponent("Conheça a ACTYCARE®")}&body=${encodeURIComponent(fullMessage)}`
+            email: `mailto:?subject=${encodeURIComponent(getUiText("shareSubject"))}&body=${encodeURIComponent(fullMessage)}`
         };
 
         return urls[action];
@@ -184,8 +203,8 @@
         overlay.innerHTML = `
             <div class="share-modal" role="dialog" aria-modal="true" aria-labelledby="share-modal-title">
                 <div class="share-modal__header">
-                    <h2 id="share-modal-title">Compartilhar</h2>
-                    <button class="share-modal__close" type="button" aria-label="Fechar compartilhamento" data-share-close>&times;</button>
+                    <h2 id="share-modal-title" data-i18n-en="Share" data-i18n-es="Compartir">Compartilhar</h2>
+                    <button class="share-modal__close" type="button" aria-label="Fechar compartilhamento" data-share-close data-i18n-en-aria-label="Close sharing" data-i18n-es-aria-label="Cerrar compartir">&times;</button>
                 </div>
                 <div class="share-modal__options">
                     <button class="share-option" type="button" data-share-action="linkedin">
@@ -210,7 +229,7 @@
                     </button>
                     <button class="share-option" type="button" data-share-action="copy">
                         <span class="share-option__icon" aria-hidden="true">URL</span>
-                        <span>Copiar link</span>
+                        <span data-i18n-en="Copy Link" data-i18n-es="Copiar Enlace">Copiar link</span>
                     </button>
                 </div>
                 <p class="share-modal__feedback" role="status" aria-live="polite" data-share-feedback></p>
@@ -218,6 +237,7 @@
         `;
 
         document.body.appendChild(overlay);
+        window.actycareI18n?.apply?.(overlay);
         return overlay;
     };
 
@@ -257,9 +277,9 @@
         if (action === "copy") {
             try {
                 await copyToClipboard(getCurrentUrl());
-                shareFeedback.textContent = "Link copiado.";
+                shareFeedback.textContent = getUiText("linkCopied");
             } catch (error) {
-                shareFeedback.textContent = "Não foi possível copiar o link.";
+                shareFeedback.textContent = getUiText("copyError");
             }
             return;
         }
@@ -282,6 +302,12 @@
     if (shareButton) {
         shareButton.addEventListener("click", openShareModal);
     }
+
+    window.addEventListener("actycare:languagechange", () => {
+        if (cabecalho) {
+            atualizarAcessibilidade(cabecalho.classList.contains("menu-aberto"));
+        }
+    });
 
     closeShareButton.addEventListener("click", closeShareModal);
 

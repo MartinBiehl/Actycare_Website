@@ -284,6 +284,81 @@ img {
     background: rgba(255, 255, 255, 0.42);
 }
 
+.language-selector {
+    position: relative;
+    display: inline-flex;
+    flex: 0 0 auto;
+}
+
+.botao-traducao img {
+    object-fit: contain;
+}
+
+.language-menu {
+    position: absolute;
+    top: calc(100% + 10px);
+    right: 0;
+    z-index: 40;
+    width: max-content;
+    min-width: 132px;
+    display: grid;
+    gap: 4px;
+    padding: 6px;
+    border: 1px solid rgba(0, 79, 134, 0.12);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.96);
+    box-shadow: 0 16px 34px rgba(0, 47, 85, 0.14);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateY(-6px) scale(0.98);
+    transform-origin: top right;
+    transition:
+        opacity 0.18s ease,
+        visibility 0.18s ease,
+        transform 0.18s ease;
+}
+
+.cabecalho.header--scrolled .language-menu {
+    top: calc(100% + 14px);
+    background: rgba(255, 255, 255, 0.94);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+}
+
+.language-selector.is-open .language-menu,
+.language-menu.is-open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateY(0) scale(1);
+}
+
+.language-option {
+    min-height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 10px;
+    border: 0;
+    border-radius: 6px;
+    background: transparent;
+    color: var(--texto);
+    font: inherit;
+    font-size: 12px;
+    line-height: 1;
+    cursor: pointer;
+    transition: background 0.18s ease, color 0.18s ease;
+}
+
+.language-option:hover,
+.language-option:focus-visible,
+.language-option.is-active {
+    background: var(--azul-profundo);
+    color: var(--branco);
+    outline: none;
+}
+
 .botao-menu {
     width: 44px;
     height: 44px;
@@ -1619,6 +1694,16 @@ img {
         height: 28px;
     }
 
+    .language-menu {
+        min-width: 122px;
+    }
+
+    .language-option {
+        min-height: 32px;
+        padding: 0 9px;
+        font-size: 11px;
+    }
+
     .botao-menu {
         width: 38px;
         height: 38px;
@@ -2815,6 +2900,25 @@ img {
     .pagina-sobre .cta-contato h2 {
         font-size: 18px;
         white-space: normal;
+    }
+}
+
+@media (max-width: 380px) {
+    .logo {
+        width: min(132px, 38vw);
+    }
+
+    .acoes-cabecalho {
+        gap: 5px;
+    }
+
+    .icone-cabecalho[aria-label="Instagram"],
+    .icone-cabecalho[aria-label="LinkedIn"] {
+        width: 0;
+        height: 28px;
+        opacity: 0;
+        pointer-events: none;
+        transform: translateY(-4px) scale(0.9);
     }
 }
 

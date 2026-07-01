@@ -141,7 +141,7 @@ img {
 }
 
 .cabecalho.header--scrolled .logo img {
-    transform: translate3d(0, 7%, 0) scale(0.74);
+    transform: translate3d(0, -1%, 0) scale(0.74);
 }
 
 .menu {
@@ -493,6 +493,13 @@ img {
     font-size: 13px;
     cursor: pointer;
     transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.share-option__icon img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+    display: block;
 }
 
 .share-option:hover,

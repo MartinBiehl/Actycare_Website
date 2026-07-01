@@ -212,7 +212,7 @@
                         <span>LinkedIn</span>
                     </button>
                     <button class="share-option" type="button" data-share-action="whatsapp">
-                        <span class="share-option__icon" aria-hidden="true">WA</span>
+                        <span class="share-option__icon" aria-hidden="true"><img src="images/whatsapp-icon.png" alt="WhatsApp"></span>
                         <span>WhatsApp</span>
                     </button>
                     <button class="share-option" type="button" data-share-action="facebook">

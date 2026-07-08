@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" role="img" aria-labelledby="title">
+  <title id="title">Conformidade Global</title>
+  <g fill="none" stroke="#0073aa" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="48" cy="48" r="34"/>
+    <path d="M14 48h68"/>
+    <path d="M48 14c11 11 17 22 17 34s-6 23-17 34c-11-11-17-22-17-34s6-23 17-34z"/>
+    <path d="M48 14v68"/>
+    <path d="M22 30h52"/>
+    <path d="M22 66h52"/>
+  </g>
+</svg>

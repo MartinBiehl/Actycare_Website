@@ -8,17 +8,18 @@ const actycareProducts = [
         application: "Leave On & Rinse Off",
         use: "0,60 - 1,00%",
         page: "04",
+        wideImage: true,
         // IMAGEM DO PRODUTO: coloque aqui o arquivo correto do catálogo para ACTYCARE® PH.
-        image: "images/produtos-otimizados/ph.jpg",
+        image: "images/produtos-otimizados/ph4.jpg",
         imagePosition: "62% center",
         alertColor: "#002f55",
         intro: [
-            "ACTYCARE® PH é uma solução conservante à base de phenoxyethanol para sistemas cosméticos que exigem versatilidade, segurança e boa tolerância cutânea.",
-            "Configura-se como uma solução moderna e livre de parabenos para sistemas conservantes de alto desempenho."
+            "ACTYCARE® PH é um conservante de amplo espectro à base de phenoxyethanol, indicado para produtos leave-on e rinse-off. Apresenta estabilidade química e térmica entre pH 3 e 10 e compatibilidade com emulsões, soluções aquosas, géis e sistemas tensoativos.",
+            "Também atua como solvente e coadjuvante, apoiando a dispersão de fragrâncias, corantes e ativos sensíveis. É uma solução livre de parabenos."
         ],
-        applications: ["Cremes e Loções", "Maquiagens", "Condicionadores", "Sabonetes Líquidos", "Protetores Solares", "Shampoos", "Lenços Umedecidos"],
-        differentials: ["Livre de parabenos", "Baixo impacto sensorial", "Excelente compatibilidade formulativa"],
-        benefits: ["Proteção bactericida para diferentes bases cosméticas", "Perfil versátil para projetos leave-on e rinse-off"]
+        applications: ["Cremes e Loções", "Maquiagens", "Shampoos", "Condicionadores", "Sabonetes Líquidos", "Protetores Solares", "Lenços Umedecidos"],
+        differentials: ["Amplo espectro", "Estável entre pH 3 e 10", "Solvente e coadjuvante", "Livre de parabenos"],
+        benefits: ["Proteção para diferentes bases cosméticas", "Compatibilidade com sistemas aquosos, emulsões, géis e tensoativos", "Apoio à dispersão de fragrâncias, corantes e ativos sensíveis"]
     },
     {
         id: "actycare-phcg",
@@ -34,12 +35,12 @@ const actycareProducts = [
         imagePosition: "center",
         alertColor: "#002f55",
         intro: [
-            "ACTYCARE® PHCG é um conservante multifuncional à base de Phenoxyethanol e Caprylyl Glycol, desenvolvido para atuar como sistema antimicrobiano eficaz e seguro em formulações cosméticas e de cuidados pessoais.",
-            "Além da função booster, o Caprylyl Glycol contribui para a melhoria sensorial da formulação, podendo atuar como agente umectante auxiliar."
+            "ACTYCARE® PHCG é um conservante multifuncional de amplo espectro contra bactérias e fungos. A sinergia entre Phenoxyethanol e Caprylyl Glycol reforça o desempenho antimicrobiano em formulações cosméticas e de cuidados pessoais.",
+            "O Caprylyl Glycol oferece efeito booster e também contribui com funções hidratante e umectante. A solução é livre de parabenos e formol e apresenta excelente tolerância cutânea."
         ],
         applications: ["Cremes Faciais e Corporais", "Géis", "Sabonetes Líquidos Corporais", "Cremes Capilares"],
-        differentials: ["Multifuncional", "Apoio sensorial"],
-        benefits: ["Amplia a robustez do sistema conservante", "Favorece formulações com toque refinado", "Adequado para portfólios leave-on e rinse-off"]
+        differentials: ["Amplo espectro", "Sinergia antimicrobiana", "Efeito booster", "Livre de parabenos e formol"],
+        benefits: ["Amplia a robustez do sistema conservante", "Oferece ação hidratante e umectante", "Excelente tolerância cutânea"]
     },
     {
         id: "actycare-pheg",
@@ -47,7 +48,7 @@ const actycareProducts = [
         code: "ACTYCARE® PHEG",
         inci: "Phenoxyethanol, Ethylhexylglycerin",
         application: "Leave On & Rinse Off",
-        use: "0,60 - 1,00%",
+        use: "0,60 - 1,10%",
         page: "06",
         wideImage: true,
         // IMAGEM DO PRODUTO: coloque aqui o arquivo correto do catálogo para ACTYCARE® PHEG.
@@ -55,12 +56,13 @@ const actycareProducts = [
         imagePosition: "48% center",
         alertColor: "#024f96",
         intro: [
-            "ACTYCARE® PHEG combina Phenoxyethanol e Ethylhexylglycerin em uma solução moderna, paraben-free, livre de isotiazolinonas e tecnicamente otimizada para sistemas conservantes de alto desempenho.",
-            "Graças à sua versatilidade, segurança e baixo impacto sensorial, é indicado para uma ampla gama de aplicações cosméticas."
+            "ACTYCARE® PHEG combina Phenoxyethanol e Ethylhexylglycerin em uma solução livre de parabenos e isotiazolinonas. O Phenoxyethanol atua como solvente e veiculante, favorecendo a solubilização de compostos hidrofóbicos.",
+            "A Ethylhexylglycerin potencializa o sistema ao aumentar a permeabilidade da parede celular microbiana, contribuindo para a redução da concentração mínima inibitória."
         ],
         applications: ["Cremes", "Loções", "Shampoos", "Condicionadores", "Sabonetes Líquidos", "Protetores Solares", "Maquiagens", "Lenços Umedecidos"],
-        differentials: ["Paraben-free", "Livre de isotiazolinonas", "Baixo impacto sensorial"],
-        benefits: ["De acordo com posicionamentos modernos de formulação", "Contribui para sistemas conservantes de alto desempenho", "Oferece ampla compatibilidade com diferentes formulações"]
+        differentials: ["Livre de parabenos", "Livre de isotiazolinonas", "Solvente e veiculante", "Ação potencializadora"],
+        benefits: ["Solubiliza compostos hidrofóbicos", "Aumenta a permeabilidade da parede celular microbiana", "Contribui para reduzir a concentração mínima inibitória"],
+        note: "Recomenda-se o uso de 0,60% a 1,00% na formulação final."
     },
     {
         id: "actycare-ph4",
@@ -70,14 +72,13 @@ const actycareProducts = [
         application: "Leave On & Rinse Off",
         use: "0,25 - 1,00%",
         page: "07",
-        wideImage: true,
         // IMAGEM DO PRODUTO: coloque aqui o arquivo correto do catálogo para ACTYCARE® PH4.
-        image: "images/produtos-otimizados/ph4.jpg",
+        image: "images/produtos-otimizados/ph.jpg",
         imagePosition: "70% center",
         alertColor: "#9c131d",
         intro: [
-            "ACTYCARE® PH4 é um sistema conservante multifuncional de amplo espectro que combina Phenoxyethanol com uma mistura equilibrada de parabenos, conhecidos por sua estabilidade e excelente compatibilidade cosmética.",
-            "Apresenta boa estabilidade térmica, oferecendo alta robustez microbiológica em formulações complexas com alto teor de água e diversos tipos de surfactantes."
+            "ACTYCARE® PH4 é um sistema conservante de amplo espectro que combina Phenoxyethanol com Methylparaben, Ethylparaben, Propylparaben e Butylparaben, protegendo contra bactérias, leveduras e fungos.",
+            "Apresenta estabilidade térmica e alta robustez em formulações complexas com alto teor de água e diferentes tipos de surfactantes."
         ],
         applications: ["Formulações complexas", "sistemas com alto teor de água ou extratos vegetais", "bases com surfactantes", "produtos rinse-off"],
         differentials: ["Amplo espectro", "Alta estabilidade térmica", "Robustez microbiológica"],
@@ -90,19 +91,20 @@ const actycareProducts = [
         code: "ACTYCARE® PHB",
         inci: "Polyaminopropyl Biguanide",
         application: "Leave On & Rinse Off",
-        use: "0,30 - 1,50%",
+        use: "0,15 - 0,50%",
         page: "08",
         // IMAGEM DO PRODUTO: coloque aqui o arquivo correto do catálogo para ACTYCARE® PHB.
         image: "images/produtos-otimizados/phb.jpg",
         imagePosition: "58% center",
         alertColor: "#002f55",
         intro: [
-            "ACTYCARE® PHB é um conservante catiônico à base de Polyaminopropyl Biguanide, amplamente utilizado para o controle microbiológico em formulações cosméticas aquosas.",
-            "Apresenta atividade antimicrobiana contra bactérias Gram-positivas, Gram-negativas, fungos e leveduras, sendo particularmente eficaz contra Pseudomonas spp."
+            "ACTYCARE® PHB é um conservante catiônico à base de Polyaminopropyl Biguanide, com ação prolongada e resistência à contaminação recorrente em formulações cosméticas aquosas.",
+            "É compatível com sistemas catiônicos, anfotéricos e não iônicos e especialmente indicado para formulações com histórico de desafio por Pseudomonas."
         ],
-        applications: ["Sabonetes desinfetantes", "Lenços Umedecidos", "produtos de higiene pessoal", "bases leave-on", "bases rinse-off"],
-        differentials: ["Conservante catiônico", "Atividade ampla", "Ênfase em controle bacteriano"],
-        benefits: ["Reforça sistemas sujeitos a alto desafio microbiológico", "Ajuda na estabilidade de formulações aquosas", "Contribui para proteção consistente ao longo da vida útil"]
+        applications: ["Sabonetes Líquidos", "Géis", "Loções", "Cremes", "Produtos Capilares"],
+        differentials: ["Conservante catiônico", "Ação prolongada", "Resistência à recontaminação", "Compatível com sistemas catiônicos, anfotéricos e não iônicos"],
+        benefits: ["Reforça sistemas sujeitos a alto desafio microbiológico", "Contribui para proteção consistente ao longo da vida útil", "Indicado para desafios por Pseudomonas"],
+        note: "Recomenda-se o uso de 0,15% a 0,50%. Surfactantes aniônicos podem reduzir sua atividade."
     },
     {
         id: "actycare-mc",
@@ -113,17 +115,17 @@ const actycareProducts = [
         use: "0,05 - 0,10%",
         page: "09",
         // IMAGEM DO PRODUTO: coloque aqui o arquivo correto do catálogo para ACTYCARE® MC.
-        image: "images/produtos-otimizados/mc.jpg",
+        image: "images/produtos-otimizados/mc-atualizado.jpg",
         imagePosition: "42% center",
         alertColor: "#7b4a42",
         intro: [
-            "ACTYCARE® MC é um sistema conservante líquido de amplo espectro baseado em uma mescla de isotiazolinonas, indicado para o controle de bactérias, leveduras e fungos em formulações cosméticas com elevada atividade de água.",
-            "Devido à elevada potência antimicrobiana das isotiazolinonas, apresenta alta eficácia microbiológica mesmo em baixas concentrações de uso."
+            "ACTYCARE® MC é uma mistura de isotiazolinonas com ação contra bactérias, leveduras e fungos, indicada para formulações cosméticas com elevada atividade de água.",
+            "Apresenta alta eficácia microbiológica em baixa concentração e deve ser utilizada exclusivamente em produtos rinse-off."
         ],
         applications: ["Shampoos", "sabonetes líquidos", "géis de banho", "sistemas rinse-off", "formulações com elevada atividade de água"],
         differentials: ["Baixo teor de uso","Uso exclusivo rinse-off"],
         benefits: ["Proteção eficiente contra ampla variedade de microrganismos", "Boa resposta em produtos enxaguáveis", "Alternativa técnica para bases com grande teor aquoso"],
-        note: "Uso exclusivo em sistemas Rinse Off devido ao perfil dermatológico das isotiazolinonas."
+        note: "Uso exclusivo em sistemas rinse-off devido ao perfil dermatológico das isotiazolinonas."
     },
     {
         id: "actycare-bs",
@@ -178,12 +180,13 @@ const actycareProducts = [
         imagePosition: "48% center",
         alertColor: "#7b4a42",
         intro: [
-            "ACTYCARE® MP é um componente conservante do grupo dos parabenos, à base de Methylparaben, utilizado em formulações cosméticas com foco em controle de bactérias.",
-            "Apresenta atividade contra bactérias, fungos e leveduras, sendo particularmente eficaz contra bactérias Gram-positivas."
+            "ACTYCARE® MP é um conservante à base de Methylparaben, com maior solubilidade relativa entre os parabenos e boa distribuição na fase aquosa das formulações.",
+            "Pode ser associado a outros parabenos ou conservantes e apresenta maior eficácia relativa contra bactérias Gram-positivas."
         ],
         applications: ["Emulsões cosméticas", "produtos leave-on", "produtos rinse-off", "sistemas com parabenos", "cuidados pessoais"],
-        differentials: ["Histórico técnico consolidado", "Amplo espectro", "Boa estabilidade"],
-        benefits: ["Apoia sistemas conservantes clássicos e robustos", "Contribui para controle de deterioração microbiológica", "Permite combinações com outros ativos da linha"]
+        differentials: ["Maior solubilidade relativa", "Boa distribuição na fase aquosa", "Eficácia contra Gram-positivas"],
+        benefits: ["Apoia sistemas conservantes clássicos e robustos", "Permite associação com outros parabenos ou conservantes", "Contribui para o controle bacteriano"],
+        note: "Recomenda-se o uso de 0,10% a 0,40% na formulação final."
     },
     {
         id: "actycare-pp",
@@ -191,7 +194,7 @@ const actycareProducts = [
         code: "ACTYCARE® PP",
         inci: "Propylparaben",
         application: "Leave On & Rinse Off",
-        use: "0,10 - 0,40%",
+        use: "0,05 - 0,40%",
         page: "13",
         // IMAGEM DO PRODUTO: coloque aqui o arquivo correto do catálogo para ACTYCARE® PP.
         image: "images/produtos-otimizados/pp.jpg",
@@ -203,7 +206,8 @@ const actycareProducts = [
         ],
         applications: ["Emulsões", "fases oleosas", "interfaces óleo/água", "produtos leave-on", "produtos rinse-off"],
         differentials: ["Maior lipofilicidade", "Atividade contra fungos e leveduras", "Complementa sistemas com parabenos"],
-        benefits: ["Amplia o espectro de proteção microbiológica", "Contribui para bases com fase oleosa relevante", "Ajuda a proteger contra deterioração por fungos e leveduras"]
+        benefits: ["Amplia o espectro de proteção microbiológica", "Contribui para bases com fase oleosa relevante", "Ajuda a proteger contra deterioração por fungos e leveduras"],
+        note: "Recomenda-se o uso de 0,05% a 0,14% na formulação final."
     },
     {
         id: "actycare-ba",
@@ -218,12 +222,12 @@ const actycareProducts = [
         imagePosition: "60% center",
         alertColor: "#002f55",
         intro: [
-            "ACTYCARE® BA é uma solução à base de Benzyl Alcohol para formulações cosméticas que buscam versatilidade, segurança e baixo impacto sensorial.",
-            "Quando usado em sistemas neutros ou com maior suscetibilidade a contaminação, pode ser associado a outros conservantes da linha ACTYCARE® para maior performance e robustez."
+            "ACTYCARE® BA é uma solução à base de Benzyl Alcohol com pureza igual ou superior a 99,9%. Atua como solvente, coadjuvante, conservante e veículo para fragrâncias.",
+            "É aplicável aos segmentos cosmético, farmacêutico e industrial e pode ser associado a outros conservantes em sistemas neutros ou mais suscetíveis à contaminação."
         ],
-        applications: ["Protetores solares", "maquiagens", "tinturas de cabelo", "perfumes", "cremes e loções", "shampoos", "condicionadores", "sabonetes líquidos"],
-        differentials: ["Baixo impacto sensorial", "Alta versatilidade", "Pode compor sistemas combinados"],
-        benefits: ["Atende ampla gama de categorias cosméticas", "Ajuda a ajustar estratégias conservantes em sistemas neutros", "Contribui para formulações com boa experiência sensorial"]
+        applications: ["Cremes e Loções", "Perfumes", "Produtos Farmacêuticos", "Aplicações Industriais", "Protetores Solares", "Maquiagens", "Tinturas de Cabelo", "Shampoos", "Condicionadores", "Sabonetes Líquidos"],
+        differentials: ["Pureza ≥ 99,9%", "Solvente e coadjuvante", "Veículo para fragrâncias", "Aplicação multissetorial"],
+        benefits: ["Atende aplicações cosméticas, farmacêuticas e industriais", "Permite associação com outros conservantes", "Reforça sistemas neutros ou mais suscetíveis à contaminação"]
     },
     {
         id: "actycare-phba",
@@ -231,19 +235,20 @@ const actycareProducts = [
         code: "ACTYCARE® PHBA",
         inci: "Phenoxyethanol, Benzyl Alcohol",
         application: "Leave On & Rinse Off",
-        use: "0,60 - 1,00%",
+        use: "0,40 - 2,00%",
         page: "15",
         // IMAGEM DO PRODUTO: coloque aqui o arquivo correto do catálogo para ACTYCARE® PHBA.
         image: "images/produtos-otimizados/phba.jpg",
         imagePosition: "50% center",
         alertColor: "#53664c",
         intro: [
-            "ACTYCARE® PHBA é um conservante à base de Phenoxyethanol e Benzyl Alcohol, utilizado como sistema antimicrobiano em produtos destinados a cuidados pessoais.",
-            "Apresenta melhor desempenho microbiológico em formulações levemente ácidas, preferencialmente na faixa de pH 4,0 a 5,5, onde a atividade antifúngica do álcool benzílico é maximizada."
+            "ACTYCARE® PHBA combina Benzyl Alcohol e Phenoxyethanol, cujos mecanismos de ação complementares oferecem proteção contra bactérias Gram-positivas e Gram-negativas.",
+            "Apresenta melhor desempenho microbiológico entre pH 4,0 e 5,5, faixa em que a atividade antifúngica do álcool benzílico é favorecida."
         ],
         applications: ["Formulações levemente ácidas", "cuidados pessoais", "sistemas leave-on", "sistemas rinse-off", "sistemas combinados"],
-        differentials: ["Dupla base conservante", "Boa resposta em pH ácido", "Atividade antifúngica favorecida"],
-        benefits: ["Combina Phenoxyethanol e Benzyl Alcohol", "Reforça a proteção microbiológica em bases ácidas", "Permite ajustes conforme risco microbiológico da formulação"]
+        differentials: ["Mecanismos complementares", "Melhor desempenho entre pH 4,0 e 5,5", "Ação contra Gram-positivas e Gram-negativas"],
+        benefits: ["Reforça a proteção microbiológica em bases ácidas", "Combina ação bacteriana e antifúngica", "Permite ajustes conforme o risco microbiológico"],
+        note: "Recomenda-se o uso de 0,40% a 2,00%. Avaliar a eficácia em sistemas neutros, complexos ou com maior carga de ativos."
     },
     {
         id: "actycare-mph",
@@ -259,8 +264,8 @@ const actycareProducts = [
         imagePosition: "center",
         alertColor: "#8c4e32",
         intro: [
-            "ACTYCARE® MPH é um conservante líquido à base de Methylisothiazolinone e Phenoxyethanol em meio aquoso, desenvolvido para oferecer proteção antimicrobiana eficaz em formulações cosméticas e de higiene pessoal do tipo rinse-off.",
-            "Sua composição balanceada combina a alta eficiência bactericida do MIT com a ação antimicrobiana complementar do phenoxyethanol."
+            "ACTYCARE® MPH é um sistema de Methylisothiazolinone (MIT) e Phenoxyethanol em meio aquoso, destinado exclusivamente à proteção antimicrobiana de produtos rinse-off.",
+            "Livre de formaldeído e parabenos, apresenta compatibilidade com tensoativos aniônicos, não iônicos e anfotéricos."
         ],
         applications: ["Shampoos", "sabonetes líquidos", "géis de banho", "produtos de higiene pessoal rinse-off"],
         differentials: ["Sem formaldeído", "Sem parabenos", "Boa compatibilidade com tensoativos"],
@@ -294,7 +299,7 @@ const actycareProducts = [
         code: "ACTYCARE® DM",
         inci: "DMDM Hydantoin",
         application: "Leave On & Rinse Off",
-        use: "0,20 - 1,00%",
+        use: "0,30 - 1,00%",
         page: "18",
         // IMAGEM DO PRODUTO: coloque aqui o arquivo correto do catálogo para ACTYCARE® DM.
         image: "images/produtos-otimizados/dm.jpg",
@@ -306,7 +311,8 @@ const actycareProducts = [
         ],
         applications: ["Shampoos e condicionadores", "loções corporais", "sabonetes líquidos", "cremes faciais", "géis de limpeza", "emulsões cosméticas"],
         differentials: ["Robustez de longo prazo", "Fácil incorporação", "Bom custo-benefício"],
-        benefits: ["Proteção e estabilidade microbiológica", "Versatilidade para higiene pessoal e cuidados cosméticos", "Solução confiável para diversas formulações"]
+        benefits: ["Proteção e estabilidade microbiológica", "Preserva características sensoriais e físico-químicas", "Solução confiável para diversas formulações"],
+        note: "Recomenda-se o uso de 0,20% a 1,00% na formulação final."
     },
     {
         id: "actycare-zo",
@@ -314,7 +320,7 @@ const actycareProducts = [
         code: "ACTYCARE® ZO",
         inci: "Zinc Pyrithione",
         application: "Rinse Off",
-        use: "0,30 - 2,00%",
+        use: "0,60 - 2,00%",
         page: "19",
         wideImage: true,
         // IMAGEM DO PRODUTO: coloque aqui o arquivo correto do catálogo para ACTYCARE® ZO.
@@ -322,12 +328,13 @@ const actycareProducts = [
         imagePosition: "54% center",
         alertColor: "#838a86",
         intro: [
-            "ACTYCARE® ZO é um agente antimicrobiano à base de Piritionato de Zinco, amplamente utilizado em formulações cosméticas e dermocosméticas para o controle microbiológico e aplicações capilares anticaspa.",
-            "Apresenta atividade antifúngica e antibacteriana, sendo particularmente eficaz contra Malassezia spp., microrganismo associado à formação de caspa no couro cabeludo."
+            "ACTYCARE® ZO é um agente à base de Piritionato de Zinco com ação fungistática e bacteriostática, especialmente relevante contra Malassezia spp. e no controle da caspa e da dermatite seborreica.",
+            "Seu mecanismo envolve a inibição da divisão celular do fungo. A aplicação é exclusiva em produtos rinse-off."
         ],
         applications: ["Shampoos anticaspa", "formulações que requerem atividade antifúngica", "produtos capilares com controle microbiológico"],
-        differentials: ["Atividade antifúngica", "Aplicação capilar anticaspa", "Base zinc pyrithione"],
-        benefits: ["Apoia controle microbiológico em produtos capilares", "Atua contra microrganismos associados à caspa", "Indicado para sistemas rinse-off de cuidado do couro cabeludo"]
+        differentials: ["Ação fungistática e bacteriostática", "Atuação contra Malassezia spp.", "Inibição da divisão celular do fungo"],
+        benefits: ["Apoia o controle da caspa e da dermatite seborreica", "Atua contra microrganismos associados à caspa", "Indicado para sistemas rinse-off de cuidado do couro cabeludo"],
+        note: "Recomenda-se o uso de 0,60% a 2,00%. Aplicação exclusiva em produtos rinse-off."
     },
     {
         id: "actycare-ph-avant",
@@ -337,18 +344,58 @@ const actycareProducts = [
         application: "Leave On & Rinse Off",
         use: "0,50 - 1,00%",
         page: "20",
-        image: "images/produtos-otimizados/ph-avant.jpg",
+        image: "images/produtos-otimizados/ph-avant-atualizado.jpg",
         imagePosition: "center",
         alertColor: "#002f55",
         intro: [
-            "ACTYCARE® PH AVANT é uma solução conservante líquida de alta pureza, à base de fenoxietanol e iodopropinil butilcarbamato (IPBC), desenvolvida para a proteção microbiológica de formulações cosméticas de enxágue e de ação prolongada.",
-            "Sua fórmula oferece ação contra bactérias, leveduras e fungos filamentosos. Totalmente livre de parabenos.",
-            "Apresenta elevada estabilidade química em uma ampla faixa de pH (3,0 a 9,0), sendo compatível com emulsões, soluções aquosas, géis e sistemas tensoativos."
+            "ACTYCARE® PH AVANT combina Phenoxyethanol e Iodopropynyl Butylcarbamate (IPBC), com ação contra fungos filamentosos e aplicação especialmente voltada a produtos capilares.",
+            "É compatível entre pH 3 e 9 e com formulações que contêm proteínas, silicones e condicionadores catiônicos."
         ],
-        applications: ["Formulações de enxágue", "formulações de ação prolongada", "emulsões", "soluções aquosas", "Lenços umedecidos", "géis para cabelo", "sistemas tensoativos"],
-        differentials: ["Alta pureza", "Livre de parabenos", "Estável em ampla faixa de pH"],
-        benefits: ["Proteção contra bactérias, leveduras e fungos filamentosos", "Compatibilidade com diferentes sistemas cosméticos", "Indicado para formulações leave-on e rinse-off"],
-        note: "Pode ser utilizado em dosagens entre 0,50% e 1,00% do peso total da formulação, respeitando as diretrizes internacionais."
+        applications: ["Shampoos", "Condicionadores", "Máscaras Capilares", "Tratamentos Capilares", "Produtos de Styling"],
+        differentials: ["Ação contra fungos filamentosos", "Compatível entre pH 3 e 9", "Compatível com proteínas, silicones e condicionadores catiônicos"],
+        benefits: ["Proteção de formulações capilares", "Compatibilidade com diferentes sistemas cosméticos", "Indicado para formulações leave-on e rinse-off"],
+        note: "Pode ser utilizado entre 0,50% e 1,00%. Não utilizar em produtos destinados a crianças menores de 3 anos."
+    },
+    {
+        id: "actycare-bsb",
+        name: "ACTYCARE® BSB",
+        code: "ACTYCARE® BSB",
+        inci: "Sodium Benzoate, Potassium Sorbate",
+        application: "Leave On & Rinse Off",
+        use: "0,50 - 2,00%",
+        page: "08",
+        image: "images/produtos-otimizados/bsb.jpg",
+        imagePosition: "center",
+        alertColor: "#002f55",
+        intro: [
+            "ACTYCARE® BSB é um sistema conservante combinado de Sodium Benzoate e Potassium Sorbate para formulações cosméticas de pH ácido, tanto leave-on quanto rinse-off.",
+            "Em pH adequado, formam-se as frações não dissociadas dos ácidos benzoico e sórbico. O sistema oferece espectro mais completo que os componentes isolados, com proteção contra fungos e leveduras e apoio ao controle bacteriano."
+        ],
+        applications: ["Formulações Cosméticas de pH Ácido", "Produtos Leave-on", "Produtos Rinse-off", "Sistemas Conservantes Combinados"],
+        differentials: ["Sistema combinado", "Atuação em pH ácido", "Espectro mais completo", "Frações ácidas não dissociadas"],
+        benefits: ["Proteção contra fungos e leveduras", "Apoio ao controle bacteriano", "Permite associação com ACTYCARE® FREE fora da faixa ideal"],
+        note: "Recomenda-se o uso de 0,50% a 1,50%, preferencialmente entre pH 4,0 e 5,5. A eficácia depende do pH, da atividade de água e da composição da formulação. Fora da faixa ideal, pode ser associado ao ACTYCARE® FREE. Recomenda-se avaliar a eficácia microbiológica."
+    },
+    {
+        id: "actycare-free",
+        name: "ACTYCARE® FREE",
+        code: "ACTYCARE® FREE",
+        inci: "Pentylene Glycol, Caprylyl Glycol, Ethylhexylglycerin",
+        application: "Leave On & Rinse Off",
+        use: "0,50 - 2,00%",
+        page: "09",
+        wideImage: true,
+        image: "images/produtos-otimizados/free.jpg",
+        imagePosition: "center",
+        alertColor: "#002f55",
+        intro: [
+            "ACTYCARE® FREE é um sistema multifuncional de Pentylene Glycol, Caprylyl Glycol e Ethylhexylglycerin para controle microbiológico de amplo espectro sem recorrer a itens enquadrados como conservantes.",
+            "Compatível com produtos leave-on, rinse-off e lenços umedecidos, mantém estabilidade entre pH 3 e 9, tolera temperaturas superiores a 80 °C e exposição à luz. Atua ainda como umectante, emoliente e coemulsificante auxiliar, permitindo formulações preservative-free."
+        ],
+        applications: ["Baby Care", "Área dos Olhos e Mucosas", "Cremes e Loções", "Séruns e Protetores Solares", "Shampoos", "Condicionadores", "Sabonetes Líquidos", "Lenços Umedecidos", "Maquiagens"],
+        differentials: ["Amplo espectro", "Preservative-free", "Estável entre pH 3 e 9", "Resistente a calor e luz"],
+        benefits: ["Funções umectante e emoliente", "Ação coemulsificante auxiliar", "Versatilidade para aplicações sensíveis"],
+        note: "Uso como booster: 0,50% a 1,00%. Uso isolado: 1,00% a 2,00%."
     }
 ];
 
@@ -763,6 +810,54 @@ const actycareProductTranslations = {
             benefits: ["Protección contra bacterias, levaduras y hongos filamentosos", "Compatibilidad con diferentes sistemas cosméticos", "Indicado para formulaciones leave-on y rinse-off"],
             note: "Puede utilizarse en dosificaciones entre 0,50% y 1,00% del peso total de la formulación, respetando las directrices internacionales."
         }
+    },
+    "actycare-bsb": {
+        en: {
+            application: "Leave-on & Rinse-off",
+            intro: [
+                "ACTYCARE® BSB is a combined preservative system of Sodium Benzoate and Potassium Sorbate for acidic cosmetic formulations, both leave-on and rinse-off.",
+                "At appropriate pH, the non-dissociated fractions of benzoic and sorbic acids are formed. The system offers a more complete spectrum than the isolated components, providing protection against fungi and yeasts and supporting bacterial control."
+            ],
+            applications: ["Acidic Cosmetic Formulations", "Leave-on Products", "Rinse-off Products", "Combined Preservative Systems"],
+            differentials: ["Combined System", "Action at Acidic pH", "More Complete Spectrum", "Non-Dissociated Acid Fractions"],
+            benefits: ["Protection against fungi and yeasts", "Support for bacterial control", "Allows association with ACTYCARE® FREE outside the ideal range"],
+            note: "It is recommended to use between 0.50% and 1.50%, preferably between pH 4.0 and 5.5. Efficacy depends on pH, water activity, and formulation composition. Outside the ideal range, it can be associated with ACTYCARE® FREE. It is recommended to evaluate microbiological efficacy."
+        },
+        es: {
+            application: "Leave-on & Rinse-off",
+            intro: [
+                "ACTYCARE® BSB es un sistema conservante combinado de Sodium Benzoate y Potassium Sorbate para formulaciones cosméticas ácidas, tanto leave-on como rinse-off.",
+                "En pH adecuado, se forman las fracciones no disociadas de los ácidos benzoico y sórbico. El sistema ofrece un espectro más completo que los componentes aislados, proporcionando protección contra hongos y levaduras y apoyando el control bacteriano."
+            ],
+            applications: ["Formulaciones Cosméticas de pH Ácido", "Productos Leave-on", "Productos Rinse-off", "Sistemas Conservantes Combinados"],
+            differentials: ["Sistema combinado", "Actuación en pH ácido", "Espectro más completo", "Fracciones ácidas no disociadas"],
+            benefits: ["Protección contra hongos y levaduras", "Apoyo al control bacteriano", "Permite asociación con ACTYCARE® FREE fuera del rango ideal"],
+            note: "Se recomienda usar entre 0,50% y 1,50%, preferiblemente entre pH 4,0 y 5,5. La eficacia depende del pH, de la actividad del agua y de la composición de la fórmula. Fuera del rango ideal, puede asociarse con ACTYCARE® FREE. Se recomienda evaluar la eficacia microbiológica."
+        }
+    },
+    "actycare-free": {
+        en: {
+            application: "Leave-on & Rinse-off",
+            intro: [
+                "ACTYCARE® FREE is a multifunctional system of Pentylene Glycol, Caprylyl Glycol, and Ethylhexylglycerin designed to provide broad-spectrum microbiological control without using ingredients classified as preservatives.",
+                "Compatible with leave-on and rinse-off products and wet wipes, it remains stable from pH 3 to 9, tolerates temperatures above 80 °C, and withstands light exposure. It also functions as a humectant, emollient, and auxiliary co-emulsifier, enabling preservative-free formulations."
+            ],
+            applications: ["Baby Care", "Eye Area & Mucosal Care", "Creams & Lotions", "Serums & Sunscreens"],
+            differentials: ["Broad spectrum", "Preservative-free", "Stable from pH 3 to 9", "Heat and light resistant"],
+            benefits: ["Humectant and emollient functions", "Auxiliary co-emulsifying action", "Versatility for sensitive applications"],
+            note: "As a preservative booster: 0.50%–1.00%. As a stand-alone system: 1.00%–2.00%."
+        },
+        es: {
+            application: "Leave-on & Rinse-off",
+            intro: [
+                "ACTYCARE® FREE es un sistema multifuncional a base de Pentylene Glycol, Caprylyl Glycol y Ethylhexylglycerin que proporciona un control microbiológico de amplio espectro sin recurrir a ingredientes clasificados como conservantes.",
+                "Compatible con productos leave-on, rinse-off y toallitas húmedas, mantiene su estabilidad en un rango de pH de 3 a 9, soporta temperaturas superiores a 80 °C y la exposición a la luz. Además, actúa como humectante, emoliente y coemulsionante auxiliar, permitiendo formulaciones libres de conservantes."
+            ],
+            applications: ["Cuidado del bebé", "Área de los ojos y mucosas", "Cremas y lociones", "Sérums y protectores solares"],
+            differentials: ["Amplio espectro", "Libre de conservantes", "Estable entre pH 3 y 9", "Resistente al calor y a la luz"],
+            benefits: ["Funciones humectante y emoliente", "Acción coemulsionante auxiliar", "Versatilidad para aplicaciones sensibles"],
+            note: "Como potenciador del sistema conservante: 0,50 %–1,00 %. Como sistema independiente: 1,00 %–2,00 %"
+        }
     }
 };
 
@@ -992,7 +1087,7 @@ const actycareProductTranslations = {
         }
 
         const rect = header.getBoundingClientRect();
-        return rect.top <= 0 && rect.bottom > 0 ? rect.height : 0;
+        return rect.bottom > 0 ? Math.max(0, rect.bottom) : 0;
     };
 
     const scrollToExpandedCard = (expandedRow) => {

@@ -685,12 +685,6 @@ img {
     transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
 }
 
-.Regulatorios__item:hover {
-    border-color: rgba(0, 79, 134, 0.18);
-    box-shadow: 0 22px 48px rgba(0, 47, 85, 0.1);
-    transform: translateY(-2px);
-}
-
 .Regulatorios__item-image {
     width: clamp(84px, 7vw, 98px);
     height: clamp(84px, 7vw, 98px);

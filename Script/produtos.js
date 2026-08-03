@@ -935,10 +935,6 @@ const actycareProductTranslations = {
         return originalItems.map((item, index) => translatedItems[index] || item);
     };
 
-    const renderList = (items) => items
-        .map((item) => `<li>${escapeHtml(item)}</li>`)
-        .join("");
-
     const preloadProductImages = () => {
         const loadedImages = new Set();
 

@@ -12,7 +12,7 @@ const actycareProducts = [
         // IMAGEM DO PRODUTO: coloque aqui o arquivo correto do catálogo para ACTYCARE® PH.
         image: "images/produtos-otimizados/ph4.jpg",
         imagePosition: "62% center",
-        alertColor: "#002f55",
+        alertColor: "#9c131d",
         intro: [
             "ACTYCARE® PH é um conservante de amplo espectro à base de phenoxyethanol, indicado para produtos leave-on e rinse-off. Apresenta estabilidade química e térmica entre pH 3 e 10 e compatibilidade com emulsões, soluções aquosas, géis e sistemas tensoativos.",
             "Também atua como solvente e coadjuvante, apoiando a dispersão de fragrâncias, corantes e ativos sensíveis. É uma solução livre de parabenos."
@@ -33,7 +33,7 @@ const actycareProducts = [
         // IMAGEM DO PRODUTO: coloque aqui o arquivo correto do catálogo para ACTYCARE® PHCG.
         image: "images/produtos-otimizados/phcg.jpg",
         imagePosition: "center",
-        alertColor: "#002f55",
+        alertColor: "#C79F9C",
         intro: [
             "ACTYCARE® PHCG é um conservante multifuncional de amplo espectro contra bactérias e fungos. A sinergia entre Phenoxyethanol e Caprylyl Glycol reforça o desempenho antimicrobiano em formulações cosméticas e de cuidados pessoais.",
             "O Caprylyl Glycol oferece efeito booster e também contribui com funções hidratante e umectante. A solução é livre de parabenos e formol e apresenta excelente tolerância cutânea."
@@ -75,7 +75,7 @@ const actycareProducts = [
         // IMAGEM DO PRODUTO: coloque aqui o arquivo correto do catálogo para ACTYCARE® PH4.
         image: "images/produtos-otimizados/ph.jpg",
         imagePosition: "70% center",
-        alertColor: "#9c131d",
+        alertColor:  "#954E2F",
         intro: [
             "ACTYCARE® PH4 é um sistema conservante de amplo espectro que combina Phenoxyethanol com Methylparaben, Ethylparaben, Propylparaben e Butylparaben, protegendo contra bactérias, leveduras e fungos.",
             "Apresenta estabilidade térmica e alta robustez em formulações complexas com alto teor de água e diferentes tipos de surfactantes."
@@ -96,7 +96,7 @@ const actycareProducts = [
         // IMAGEM DO PRODUTO: coloque aqui o arquivo correto do catálogo para ACTYCARE® PHB.
         image: "images/produtos-otimizados/phb.jpg",
         imagePosition: "58% center",
-        alertColor: "#002f55",
+        alertColor:"#B69777",
         intro: [
             "ACTYCARE® PHB é um conservante catiônico à base de Polyaminopropyl Biguanide, com ação prolongada e resistência à contaminação recorrente em formulações cosméticas aquosas.",
             "É compatível com sistemas catiônicos, anfotéricos e não iônicos e especialmente indicado para formulações com histórico de desafio por Pseudomonas."
@@ -117,7 +117,7 @@ const actycareProducts = [
         // IMAGEM DO PRODUTO: coloque aqui o arquivo correto do catálogo para ACTYCARE® MC.
         image: "images/produtos-otimizados/mc-atualizado.jpg",
         imagePosition: "42% center",
-        alertColor: "#7b4a42",
+        alertColor: "#E1B097",
         intro: [
             "ACTYCARE® MC é uma mistura de isotiazolinonas com ação contra bactérias, leveduras e fungos, indicada para formulações cosméticas com elevada atividade de água.",
             "Apresenta alta eficácia microbiológica em baixa concentração e deve ser utilizada exclusivamente em produtos rinse-off."
@@ -178,7 +178,7 @@ const actycareProducts = [
         // IMAGEM DO PRODUTO: coloque aqui o arquivo correto do catálogo para ACTYCARE® MP.
         image: "images/produtos-otimizados/mp.jpg",
         imagePosition: "48% center",
-        alertColor: "#7b4a42",
+        alertColor: "#474C41",
         intro: [
             "ACTYCARE® MP é um conservante à base de Methylparaben, com maior solubilidade relativa entre os parabenos e boa distribuição na fase aquosa das formulações.",
             "Pode ser associado a outros parabenos ou conservantes e apresenta maior eficácia relativa contra bactérias Gram-positivas."
@@ -199,7 +199,7 @@ const actycareProducts = [
         // IMAGEM DO PRODUTO: coloque aqui o arquivo correto do catálogo para ACTYCARE® PP.
         image: "images/produtos-otimizados/pp.jpg",
         imagePosition: "58% center",
-        alertColor: "#002f55",
+        alertColor: "#643B16",
         intro: [
             "ACTYCARE® PP é um componente conservante do grupo dos parabenos, à base de Propylparaben, utilizado em formulações cosméticas para controle de fungos filamentosos e leveduras.",
             "Devido à sua maior lipofilicidade, apresenta melhor distribuição em fases oleosas e interfaces óleo/água das formulações."
@@ -281,9 +281,9 @@ const actycareProducts = [
         use: "0,0010 - 0,0015%",
         page: "17",
         // IMAGEM DO PRODUTO: coloque aqui o arquivo correto do catálogo para ACTYCARE® MI.
-        image: "images/produtos-otimizados/mi.jpg",
-        imagePosition: "66% center",
-        alertColor: "#62787f",
+        image: "images/produtos-otimizados/shampoo.jpg",
+        imagePosition: "60% center",
+        alertColor: "#002f55",
         intro: [
             "ACTYCARE® MI é uma solução aquosa concentrada de methylisothiazolinone, desenvolvida para atuar como componente de sistemas conservantes, contribuindo principalmente para o reforço da ação bactericida em formulações cosméticas enxaguáveis.",
             "Devido à sua elevada concentração de ativo, trata-se de um conservante de uso indireto, utilizado como ajuste técnico em sistemas conservantes já existentes."
@@ -304,7 +304,7 @@ const actycareProducts = [
         // IMAGEM DO PRODUTO: coloque aqui o arquivo correto do catálogo para ACTYCARE® DM.
         image: "images/produtos-otimizados/dm.jpg",
         imagePosition: "52% center",
-        alertColor: "#002f55",
+        alertColor: "#B68D7B",
         intro: [
             "ACTYCARE® DM é uma solução à base de DMDM Hidantoína que entrega amplo espectro de ação contra bactérias, fungos e leveduras.",
             "É um conservante robusto e de longo prazo que garante ação antimicrobiana sem comprometer características sensoriais ou físico-químicas das formulações."
@@ -346,7 +346,7 @@ const actycareProducts = [
         page: "20",
         image: "images/produtos-otimizados/ph-avant-atualizado.jpg",
         imagePosition: "center",
-        alertColor: "#002f55",
+        alertColor: "#62787f",
         intro: [
             "ACTYCARE® PH AVANT combina Phenoxyethanol e Iodopropynyl Butylcarbamate (IPBC), com ação contra fungos filamentosos e aplicação especialmente voltada a produtos capilares.",
             "É compatível entre pH 3 e 9 e com formulações que contêm proteínas, silicones e condicionadores catiônicos."
@@ -366,7 +366,7 @@ const actycareProducts = [
         page: "08",
         image: "images/produtos-otimizados/bsb.jpg",
         imagePosition: "center",
-        alertColor: "#002f55",
+        alertColor: "#5A728B",
         intro: [
             "ACTYCARE® BSB é um sistema conservante combinado de Sodium Benzoate e Potassium Sorbate para formulações cosméticas de pH ácido, tanto leave-on quanto rinse-off.",
             "Em pH adequado, formam-se as frações não dissociadas dos ácidos benzoico e sórbico. O sistema oferece espectro mais completo que os componentes isolados, com proteção contra fungos e leveduras e apoio ao controle bacteriano."
@@ -387,7 +387,7 @@ const actycareProducts = [
         wideImage: true,
         image: "images/produtos-otimizados/free.jpg",
         imagePosition: "center",
-        alertColor: "#002f55",
+        alertColor: "#D4BCB4",
         intro: [
             "ACTYCARE® FREE é um sistema multifuncional de Pentylene Glycol, Caprylyl Glycol e Ethylhexylglycerin para controle microbiológico de amplo espectro sem recorrer a itens enquadrados como conservantes.",
             "Compatível com produtos leave-on, rinse-off e lenços umedecidos, mantém estabilidade entre pH 3 e 9, tolera temperaturas superiores a 80 °C e exposição à luz. Atua ainda como umectante, emoliente e coemulsificante auxiliar, permitindo formulações preservative-free."
